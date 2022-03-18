@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="640"
+   height="480"
+   id="svgcontent"
+   overflow="visible"
+   x="640"
+   y="480"
+   viewBox="0 0 640 480"
+   version="1.1"
+   sodipodi:docname="нейтриальный1_полуоткрытый рот.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs37933" />
+  <sodipodi:namedview
+     id="namedview37931"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.5229167"
+     inkscape:cx="320.10944"
+     inkscape:cy="240"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svgcontent" />
+  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+  <g
+     class="layer"
+     style="pointer-events:all"
+     id="g37928">
+    <title
+       style="pointer-events:inherit"
+       id="title37925">Layer 1</title>
+    <path
+       d="M 268.228 365.168 C 268.228 365.168 317.068 384.042 339.543 380.616 C 361.267 379.349 385.087 365.897 401.315 354.096 C 347.848 368.046 311.211 360.983 268.228 365.168 Z"
+       fill="#000000"
+       id="svg_12"
+       stroke="#000000"
+       stroke-width="2"
+       fill-opacity="1"
+       stroke-opacity="1">
+	    <animate attributeName = "d"
+to = "M 272.6038483822004 376.14289501911554 C 305.7704783822004 391.8582995528307 340.22336151216 392.7547109058941 358.0826683822004 352.24001357848334 C 344.266359378558 330.218097143555 284.38558565066313 335.89407653483596 272.6038483822004 376.14289501911554 z"
+dur = "0.3s" 
+fill = "freeze"/>
+</path>
+  </g>
+</svg>

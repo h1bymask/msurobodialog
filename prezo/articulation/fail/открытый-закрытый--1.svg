@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg width="51.075mm" height="5.6466mm" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 5107.5 564.66" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+&#160;&#160;&#160;&#160;.str1 {stroke:black;stroke-width:52.92;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+&#160;&#160;&#160;&#160;.str0 {stroke:black;stroke-miterlimit:22.9256}
+&#160;&#160;&#160;&#160;.str2 {stroke:black;stroke-width:52.92;stroke-miterlimit:22.9256}
+&#160;&#160;&#160;&#160;.fil2 {fill:black;fill-rule:nonzero}
+&#160;&#160;&#160;&#160;.fil0 {fill:yellow;fill-rule:nonzero}
+&#160;&#160;&#160;&#160;.fil4 {fill:white;fill-rule:nonzero}
+&#160;&#160;&#160;&#160;.fil1 {fill:white;fill-rule:nonzero;fill-opacity:0.501961}
+&#160;&#160;&#160;&#160;.fil5 {fill:url(#id0)}
+&#160;&#160;&#160;&#160;.fil3 {fill:url(#id1)}
+&#160;&#160;&#160;]]>
+  </style>
+  <radialGradient id="id0" cx="6615.5" cy="15032" r="1421.1" gradientTransform="matrix(.99612 -2.8148e-5 1.1073e-5 .46382 26 8060)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#F5B2B6" offset="0"/>
+   <stop stop-color="#ff0" offset="1"/>
+  </radialGradient>
+  <radialGradient id="id1" cx="13810" cy="14986" r="1453.8" gradientTransform="matrix(1.0345 .010911 -.0053626 .50801 -396 7222)" gradientUnits="userSpaceOnUse" xlink:href="#id0">
+  </radialGradient>
+ </defs>
+ <g transform="translate(-7963.2 -17719)">
+  <path class="fil2 str2" d="m7963.2 17965s1771.7 401.51 2584.6 303.64c1314.9-55.63 2548.9-529.36 2522.4-549.29-2249.6 402.79-3116.4 320.26-5107.1 245.64z">
+  <animate attributeName="d" dur="0.3s" to="M9082.04 17856.36c0,0 277.72,543.13 1382.16,595.08 1074.27,-67.19 1497.23,-603.06 1484,-624.06 -728.12,-818.78 -2186.92,-908.99 -2866.17,28.97l0.01 0.01z"/>
+  </path>
+ </g>
+  
+</svg>

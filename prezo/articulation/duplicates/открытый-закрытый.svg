@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="640" height="480" id="svgcontent" overflow="visible" x="640" y="480" viewBox="0 0 640 480"><!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit--><defs><filter height="200%" id="svg_54_blur" width="200%" x="-50%" y="-50%"><feGaussianBlur in="SourceGraphic" stdDeviation="20"></feGaussianBlur></filter></defs><g class="layer" style="pointer-events:all"><title style="pointer-events:inherit">Layer 1</title><path d="M 272.6038483822004 376.14289501911554 C 305.7704783822004 391.8582995528307 340.22336151216 392.7547109058941 358.0826683822004 352.24001357848334 C 344.266359378558 330.218097143555 284.38558565066313 335.89407653483596 272.6038483822004 376.14289501911554 z" fill="#000000" id="svg_13" stroke="#000000" stroke-width="2" fill-opacity="1" stroke-opacity="1"> 
+<animateTransform attributeName="transform" type="rotate" from="14.5184 315.343 363.702" to="3.37754 316.087 364.613" dur="0.3s" repeatCount="1"/>
+<animate attributeName = "d"
+to = "M273.34749,367.12106C306.51412,371.09072 335.52119,368.02037 358.82631,361.08327C334.43066,358.30006 298.81692,364.08834 273.34749,367.12106z" 
+dur = "0.3s" 
+fill = "freeze"
+/>
+  </path>
+ </g>
+ </svg>

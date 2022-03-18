@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="640" height="480" id="svgcontent" overflow="visible" x="640" y="480" viewBox="0 0 640 480"><!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit--><defs><filter height="200%" id="svg_54_blur" width="200%" x="-50%" y="-50%"><feGaussianBlur in="SourceGraphic" stdDeviation="20"></feGaussianBlur></filter></defs><g class="layer" style="pointer-events:all"><title style="pointer-events:inherit">Layer 1</title><path d="M 272.6038483822004 376.14289501911554 C 305.7704783822004 391.8582995528307 340.22336151216 392.7547109058941 358.0826683822004 352.24001357848334 C 344.266359378558 330.218097143555 284.38558565066313 335.89407653483596 272.6038483822004 376.14289501911554 z" fill="#000000" id="svg_13" stroke="#000000" stroke-width="2" fill-opacity="1" stroke-opacity="1" transform="rotate(14.5184 315.343 363.702)"> <animate attributeName = "d" to = "M 268.228 365.168 C 268.228 365.168 317.068 384.042 339.543 380.616 C 361.267 379.349 385.087 365.897 401.315 354.096 C 347.848 368.046 311.211 360.983 268.228 365.168 Z"
+dur = "0.3s" 
+fill = "freeze"/>
+</path>
+</g>
+</svg>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003"
+ xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str2 {stroke:black;stroke-width:52.92;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str0 {stroke:black;stroke-miterlimit:22.9256}
+    .str1 {stroke:black;stroke-width:52.92;stroke-miterlimit:22.9256}
+    .fil2 {fill:black;fill-rule:nonzero}
+    .fil0 {fill:yellow;fill-rule:nonzero}
+    .fil1 {fill:white;fill-rule:nonzero}
+    .fil3 {fill:white;fill-rule:nonzero;fill-opacity:0.501961}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <path id="svg_12" class="fil2 str1" d="M9154.25 18025.71c0,0 574.12,803.79 1419.05,807.12 993.08,-18.82 1489.05,-999.99 1474.21,-1023.34 -461.82,-117.07 -2395.97,-210.55 -2893.27,216.23l0.01 -0.01z"> 
+  <animate attributeName = "d"
+to = "m227.232242,366.421827c0,0 67,14.432275 97.714286,10.803589c29.714286,-1.463845 96.285714,-19.462954 95.285714,-20.184568c-73,14.432275 -193,9.380979 -193,9.380979z"
+dur = "0.3s" 
+fill = "freeze"/>
+</path>
+ </g>
+</svg>
