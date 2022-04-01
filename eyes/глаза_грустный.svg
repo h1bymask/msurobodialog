@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="640"
+   height="480"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="глаза_грустный.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.54166667"
+     inkscape:cx="-43.384615"
+     inkscape:cy="166.15385"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+  <circle
+     cx="-489.15384"
+     cy="108.71329"
+     fill="#ffffff"
+     id="svg_7"
+     opacity="0.5"
+     stroke="#000000"
+     stroke-width="2"
+     r="0" />
+  <path
+     d="m 154.37482,252.57115 c 0,0 77.02687,3.44398 112.23961,-4.99228 14.49851,-107.28929 3.83322,-123.84909 -4.02511,-141.97464 -15.82925,-14.067906 -27.36457,-12.620951 -36.0857,-11.739783 -6.60567,16.866313 -26.98914,39.377703 -27.71771,39.201133 -18.60536,16.95295 -53.15451,16.56601 -53.15451,16.56601 -2.72558,38.02067 6.71459,98.9541 8.74342,102.93956 z"
+     fill="#ffffff"
+     id="svg_38"
+     stroke="#000000"
+     stroke-width="2" />
+  <circle
+     cx="220.07692"
+     cy="212.21327"
+     fill="#000000"
+     id="svg_6"
+     stroke="#000000"
+     stroke-width="2"
+     r="32" />
+  <path
+     d="m 459.8042,252.23192 c 0,0 -83,0.99387 -109.72727,-2.16846 -2.72727,-22.04593 -14.27273,-116.09031 0.72727,-139.95554 7,-11.914239 18,-11.871358 28,-15.877484 11,17.993874 19,26.859104 32.27273,34.580384 10.27273,5.80092 24.72727,10.08882 57,7.96937 4.27273,15.72128 3.72727,66.7519 -8.27273,115.45173 z"
+     fill="#ffffff"
+     id="svg_42"
+     stroke="#000000"
+     stroke-width="2" />
+  <circle
+     cx="404.07693"
+     cy="213.21326"
+     fill="#000000"
+     id="svg_8"
+     stroke="#000000"
+     stroke-width="2"
+     r="32" />
+</svg>

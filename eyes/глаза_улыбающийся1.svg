@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="640"
+   height="480"
+   version="1.1"
+   id="svg1002"
+   sodipodi:docname="глаза_улыбающийся1.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1006" />
+  <sodipodi:namedview
+     id="namedview1004"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.54166667"
+     inkscape:cx="-1.8461538"
+     inkscape:cy="184.61538"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1002" />
+  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+  <path
+     d="m 460.42173,246.85766 c 3.67433,-19.9745 13.54346,-87.63383 7.06091,-121.87469 -6.48255,-34.240869 -58.67984,-34.442853 -57.27351,-34.361376 1.40633,0.08148 -39.13291,-6.500358 -56.15064,19.323736 -17.01774,25.82408 -5.44597,126.42085 -4.96846,134.46895 43.63485,-5.09898 53.54529,-13.33726 111.3317,2.44338 z"
+     fill="#ffffff"
+     id="svg_44"
+     stroke="#000000"
+     stroke-width="2" />
+  <path
+     d="m 273.96316,244.57884 c 2.36726,-20.1712 7.81449,-88.32919 -0.88159,-122.07587 -8.69608,-33.746692 -60.79597,-30.552989 -59.38731,-30.563162 1.40866,-0.01017 -39.47286,-3.941127 -54.77478,22.935212 -15.30192,26.87636 2.78882,126.50737 3.78882,134.50737 43.21077,-7.92649 52.56434,-16.79196 111.25486,-4.80355 z"
+     fill="#ffffff"
+     id="svg_43"
+     stroke="#000000"
+     stroke-width="2" />
+  <circle
+     cx="181"
+     cy="169.63637"
+     fill="#ffffff"
+     id="svg_7"
+     opacity="0.5"
+     stroke="#000000"
+     stroke-width="2"
+     r="0" />
+  <circle
+     cx="409"
+     cy="190.13635"
+     fill="#000000"
+     id="svg_8"
+     stroke="#000000"
+     stroke-width="2"
+     r="32" />
+  <circle
+     cx="218"
+     cy="190.13637"
+     fill="#000000"
+     id="svg_6"
+     stroke="#000000"
+     stroke-width="2"
+     r="32" />
+</svg>
