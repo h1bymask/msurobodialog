@@ -92,7 +92,8 @@
 				response = await fetch("main.py");
 				code = `<script type="text/python">
 from browser import window, aio
-async def main():`  + (await response.text())
+async def main():
+`  + (await response.text())
 					.replace(/^/gm, "\t ")
 					.replace(/(\s)slide\(/g,'$1window.slide(')
 					.replace(/(\s)articulation\(/g,'$1await window.articulation(')
