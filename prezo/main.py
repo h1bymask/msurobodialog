@@ -1,7 +1,16 @@
+def face(key):
+	if key== "PageUp":
+		slide("slides/злой.svg")
+	elif key =="PageDown":
+		slide("slides/нейтральный1.svg")
+	else:
+		slide("slides/грустный.svg")
+	
+
 slide("лого_персиковый.svg")
 print(read_key())  # PageUp, Enter, q, w, e, r, t, y, " ", ...
 
-slide("slides/нейтральный1.svg")
+face(read_key())
 play("speech/можете забрать завтрак, приятного аппетита.wav")
 articulation(82, "articulation/нейтрзакр.svg")
 articulation(14, "articulation/нейтрзакр-нейрполуоткр.svg")
@@ -34,9 +43,9 @@ articulation(27, "articulation/нейтрзакр.svg")
 read_key()
 
 slide("slides/слайд1.svg")
-read_key()
 
-slide("slides/нейтральный1.svg")
+
+face(read_key())
 play("speech/выберите, что вам нужно сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -51,10 +60,9 @@ read_key()
 slide("slides/слайд5.svg")
 play("speech/приложите палец.wav")
 wait_audio()
- 
-read_key()
 
-slide("slides/злой.svg")
+
+face(read_key())
 play("speech/можете забрать лекарства.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -64,37 +72,34 @@ read_key()
 articulation(0, "пусто.svg")
 slide("slides/слайд7.svg")
 	
-slide("slides/злой.svg")
+face(read_key())
 play("speech/выберите, что вы хотите сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
  
 articulation(0, "пусто.svg")
 slide("slides/слайд9.svg")
- 
-read_key()
 
-slide("slides/нейтральный1.svg")
+
+face(read_key())
 play("speech/можете забрать завтрак, приятного аппетита.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
 
 articulation(0, "пусто.svg")
 slide("slides/слайд11.svg")
- 
-read_key()
 
-slide("slides/грустный.svg")
+
+face(read_key())
 play("speech/выберите, что вы хотите сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
 
 articulation(0, "пусто.svg")
 slide("slides/слайд13.svg")
- 
-read_key()
 
-slide("slides/злой.svg")
+
+face(read_key())
 play("speech/выберите, что вам нужно сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -102,16 +107,13 @@ articulation(500, "articulation/нейтр-полуоткрытый-закрыт
 articulation(0, "пусто.svg")
 slide("slides/слайд15.svg")
 
-read_key()
-
-slide("slides/нейтральный1.svg")
+face(read_key())
 play("speech/выберите, что вам нужно сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
 
-read_key()
 
-slide("slides/грустный.svg")
+face(read_key())
 play("speech/media8.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/злой-открытый-закрытый.svg")
@@ -119,9 +121,8 @@ articulation(500, "articulation/злой-открытый-закрытый.svg")
 articulation(0, "пусто.svg")
 slide("slides/слайд19.svg")
 
-read_key()
 
-slide("slides/нейтральный1.svg")
+face(read_key())
 play("speech/media10.wav")
 articulation(82, "articulation/нейтрзакр.svg")
 articulation(14, "articulation/нейтрзакр-нейрполуоткр.svg")
@@ -146,9 +147,8 @@ read_key()
 articulation(0, "пусто.svg")
 slide("slides/слайд23.svg")
 
-read_key()
 
-slide("slides/грустный.svg")
+face(read_key())
 play("speech/изменения сохранены.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
