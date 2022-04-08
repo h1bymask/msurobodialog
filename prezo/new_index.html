@@ -23,7 +23,7 @@
 			let svg_in_progress = null;
 			let playback_in_progress = null;
 			let articulation_in_progress = null;
-			window.addEventListener("keypress", () => key_pressed = true);
+			//document.addEventListener("keypress", () => key_pressed = true);
 			async function timeout(ms) {
 				return new Promise(resolve => setTimeout(resolve, ms));
 			}
@@ -85,8 +85,10 @@
 			}
 			async function keyboard() {  // Usage await keyboard()
 				if (!key_pressed)
-					return (await new Promise(resolve => document.addEventListener("keydown", resolve, { once: true }))).key;  // await new Promise(resolve => window.addEventListener("keypress", resolve, { once: true }));
+					return (await new Promise(resolve => document.addEventListener("keypress", resolve, { once: true })) || {key: "KEY IS UNDEFINED"}).key || 'UNDEFINED';
+					//await new Promise(resolve => window.addEventListener("keypress", resolve, { once: true }));
 				key_pressed = false;
+				return 'KEY WAS ALREADY PRESSED';
 			}
 			(async()=>{
 				response = await fetch("main.py");
