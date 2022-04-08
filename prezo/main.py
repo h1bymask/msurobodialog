@@ -1,5 +1,5 @@
 slide("лого_персиковый.svg")
-read_key()
+print(read_key())  # PageUp, Enter, q, w, e, r, t, y, " ", ...
 
 slide("slides/нейтральный1.svg")
 play("speech/можете забрать завтрак, приятного аппетита.wav")

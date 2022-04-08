@@ -85,7 +85,7 @@
 			}
 			async function keyboard() {  // Usage await keyboard()
 				if (!key_pressed)
-					await new Promise(resolve => window.addEventListener("keypress", resolve, { once: true }));
+					return (await new Promise(resolve => document.addEventListener("keydown", resolve, { once: true }))).key;  // await new Promise(resolve => window.addEventListener("keypress", resolve, { once: true }));
 				key_pressed = false;
 			}
 			(async()=>{
@@ -99,7 +99,7 @@ async def main():
 					.replace(/(\s)articulation\(/g,'$1await window.articulation(')
 					.replace(/(\s)play\(/g,'$1window.play(')
 					.replace(/(\s)wait_audio\(/g,'$1await window.wait_audio(')
-					.replace(/(\s)read_key\(/g,'$1await window.keyboard(')
+					.replace(/read_key\(/g,'await window.keyboard(')
 					+ `
 aio.run(main())`;
 				let script = body.insertAdjacentHTML('beforeend', code);
