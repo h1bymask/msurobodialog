@@ -12,15 +12,22 @@ print(read_key())  # PageUp, Enter, q, w, e, r, t, y, " ", ...
 
 face(read_key())
 play("speech/можете забрать завтрак, приятного аппетита.wav")
+#м:
 articulation(82, "articulation/нейтрзакр.svg")
+#ож:
 articulation(14, "articulation/нейтрзакр-нейрполуоткр.svg")
 articulation(68, "articulation/нейтральный1(полуоткрытый_рот).svg")
+#е:
 articulation(14, "articulation/нейтрполуоткр-злойоткр.svg")
 articulation(27, "articulation/нейтральный2(открытый_рот).svg")
+#т:
 articulation(14, "articulation/злойоткр-нейрполуоткр.svg")
 articulation(27, "articulation/нейтральный1(полуоткрытый_рот).svg")
+#е:
 articulation(14, "articulation/нейтр-полуоткрытый-закрытый.svg")
 articulation(27, "articulation/нейтрзакр.svg")
+
+
 articulation(82, "articulation/нейтрзакр.svg")
 articulation(14, "articulation/нейтрзакр-нейрполуоткр.svg")
 articulation(68, "articulation/нейтральный1(полуоткрытый_рот).svg")
