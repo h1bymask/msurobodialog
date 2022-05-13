@@ -54,7 +54,7 @@ def get_articulations(phrase):
 		print(x)
 	return articulations
 	
-def speak_and_articulate(phrase):
+async def speak_and_articulate(phrase):
 	play("speech/" + phrase + ".wav")
 	for (time, file) in get_articulations():
 		articulation(time, "articulation/" + file)
