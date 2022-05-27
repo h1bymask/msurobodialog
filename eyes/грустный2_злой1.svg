@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svgcontent"
+   x="2713.8"
+   y="1136.5"
+   width="640"
+   height="480"
+   overflow="visible"
+   version="1.1"
+   viewBox="0 0 640 480"
+   sodipodi:docname="злой1.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1537" />
+  <sodipodi:namedview
+     id="namedview1535"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.6044095"
+     inkscape:cx="449.43009"
+     inkscape:cy="169.52019"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1530" />
+  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+  <g
+     class="layer"
+     pointer-events="inherit"
+     id="g1532">
+    <title
+       id="title1518">Layer 1</title>
+    <g
+       stroke="#000"
+       stroke-width="2"
+       id="g1530">
+      <ellipse
+         cx="181"
+         cy="169.64"
+         rx="0"
+         ry="0"
+         fill="#fff"
+         opacity=".5"
+         id="ellipse1520" />
+      <path
+        d="m 166.73,241.09 42.909,0.977 36.939,-1.054 32.422,-4.105 6.8724,-38.72425 2.04145,-36.40121 1.07298,-15.40465 -0.22197,-11.2659 -14.17315,3.83978 -11.64084,3.10503 -13.40386,3.62933 -12.09743,3.21574 -15.02824,3.29859 -18.859,4.33096 -23.42037,4.26702 -13.60534,3.68787 -8.09219,3.16674 2.40756,34.68695 5.875,38.75 0.003,0"
+         fill="#ffffff"
+         id="path1522"
+         sodipodi:nodetypes="cccccccccccccccccccc">
+        <animate
+           attributeName="d"
+           to="m 166.73,241.09 42.909,0.977 36.939,-1.054 32.422,-4.105 6.8724,-38.72425 2.04145,-36.40121 1.07298,-15.40465 -0.22197,-11.2659 -10.28925,-2.27577 -14.65704,-4.59623 -21.77323,-7.18237 -24.31466,-6.47182 -23.40316,-6.74521 -26.35948,-7.63062 -5.45055,21.96222 -2.79757,18.07427 -1.27548,27.40659 2.40756,34.68695 5.875,38.75 0.003,0"
+           dur="3s"
+           fill="freeze" />
+      </path>
+      <ellipse
+         cx="233"
+         cy="201.14"
+         rx="32"
+         ry="32"
+         id="ellipse1524" />
+      <path
+        d="m 472.73,241.16 -44.841,0.102 -64.889,-2.27 -7.43589,-41.267 -4.19297,-36.415 -1.47352,-15.412 -0.0863,-11.264 14.37615,3.942 9.21956,3.189 13.70958,3.726 14.63657,3.303 15.08656,3.407 16.06113,4.467 20.56183,4.436 16.38339,3.786 12.73592,2.71732 -2.89804,37.17368 -6.956,36.373 0.002,0.006"
+         fill="none"
+         id="path1526"
+         sodipodi:nodetypes="ccccccccccccccccccc">
+        <animate
+           attributeName="d"
+           to="m 472.73,241.16 -44.841,0.102 -64.889,-2.27 -7.43589,-41.267 -4.19297,-36.415 -1.47352,-15.412 -0.0863,-11.264 16.21579,-5.20989 16.51488,-4.34686 18.7813,-5.80986 23.38756,-5.84889 20.9262,-6.12886 20.28474,-6.68464 9.81083,22.001 4.86447,18.094 1.98492,26.90732 -2.89804,37.17368 -6.956,36.373 0.002,0.006"
+           dur="3s"
+           fill="freeze" />
+      </path>
+      <ellipse
+         cx="417"
+         cy="202.14"
+         rx="32"
+         ry="32"
+         id="ellipse1528" />
+    </g>
+  </g>
+</svg>
