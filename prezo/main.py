@@ -1,11 +1,15 @@
-def face(key):  # PageUp, Enter, q, w, e, r, t, y, " ", ...
-	if key== "PageUp":
+from browser import document
+def on_press_key(key):  # key.code: PageUp, Enter, q, w, e, r, t, y, " ", ...
+	if key.code == "PageUp":
 		slide("slides/злой.svg")
-	elif key =="PageDown":
-		slide("slides/нейтральный1.svg")
-	else:
+	elif key.code == "PageDown":
 		slide("slides/грустный.svg")
-		
+document.bind("keydown", on_press_key)
+
+async def face():
+	await key("Enter")
+	slide("slides/нейтральный1.svg")
+
 def get_articulations(phrase):
 	letter_list = []
 	articulations = []
@@ -14,55 +18,65 @@ def get_articulations(phrase):
 	ANIMATION=2
 	animations = [
 		#      FROM                     TO                 ANIMATION
-		["злой_открытый рот.svg", 'нейтрзакр.svg', "злой-открытый-закрытый.svg"],
+		['злой_открытый рот.svg', 'нейтрзакр.svg', 'злой-открытый-закрытый.svg'],
 		['нейтрзакр.svg', 'нейтральный1(полуоткрытый_рот).svg', 'нейтрзакр-нейтрполуоткр.svg'],
-		['нейтральный1(полуоткрытый_рот).svg', 'нейтрзакр.svg', 'нейтрполуоткр-нейтрзакр.svg']
+		['нейтрзакр.svg', 'злой_открытый рот.svg', 'злой-открытый-закрытый.svg'],  ## Исправить название файла анимации
+		['нейтральный1(полуоткрытый_рот).svg', 'нейтрзакр.svg', 'нейтр-полуоткрытый-закрытый.svg'],
+		['нейтральный1(полуоткрытый_рот).svg', 'злой_открытый рот.svg', 'нейтрполуоткр-злойоткр.svg'],
+		['злой_открытый рот.svg', 'нейтральный1(полуоткрытый_рот).svg', 'злойоткр-нейрполуоткр.svg']
 		#      FROM                     TO                 ANIMATION
 	]
 	LETTERS=0  # Индекс в массиве mouth
 	SVG=1  # Индекс в массивах mouth и articulations
+	LETTER=0  # Индекс в массиве articulations
 	mouth = [
 		#  LETTERS            SVG
-		["бмпую ", 'нейтрзакр.svg'],
+		["бмлпую ", 'нейтрзакр.svg'],
 		["агкядтэн", "злой_открытый рот.svg"],
 		['еийывфохчцжшщёзс', 'нейтральный1(полуоткрытый_рот).svg']
 		#  LETTERS            SVG
 	]
 	ONLY_MATCH=0  # нулевой (единственный) элемент
 	LAST=-1  # Индекс последнего элемента любого массива
-	TIME=0  # Индекс в массиве articulations
-	for c in phrase:
+	TIME=2  # Индекс в массиве articulations
+	for c in phrase.lower().translate(str.maketrans("","","ьъыр,.?!@#$%^&*()[]{}№=-+_`'~\\/0123456789")):
 		letter_list.append(c)
 	# Добавление закрытого рта перед словом:
-	articulations.append([41, 'нейтрзакр.svg'])
+	articulations.append([" ", 'нейтрзакр.svg', 14+27])
 	# Добавление закрытого рта после слова с помощью добавления символа "пробел", которому в массиве mouth соответствует 'нейтрзакр.svg':
 	letter_list.append(" ")
 	for l in letter_list:
 		mouth_matches = [line for line in mouth if l in line[LETTERS]]  # Взять какие-то из строк mouth, у которых нулевой элемент (строка) - LETTERS - содержит букву из l
 		match = mouth_matches[ONLY_MATCH][SVG]  # Взять нулевое единственное совпадение и в нем взять имя файла
 		if articulations[LAST][SVG] == match:
-			articulations[LAST][TIME] += 41
+			articulations[LAST][TIME] += 14+27
+			articulations[LAST][LETTER] += l
 		else:
 			anim_matches = [line for line in animations if line[FROM]==articulations[LAST][SVG] and line[TO]==match]  # Взять какие-то из строк animations, у которых нулевой элемент - FROM -(из какого положения рта перейти) совпадает с текущим (articulations[-1]), а первый элемент - TO - (в какое положение рта перейти) совпадает с требуемым
 			if len(anim_matches) == 0:
 				raise Exception("В animations не найдена запись FROM='%s' TO='%s'" % (articulations[LAST][SVG], match))
 			anim = anim_matches[ONLY_MATCH][ANIMATION]  # Взять нулевое единственное совпадение и в нем взять имя файла анимации
-			articulations.append([14, anim])
-			articulations.append([27, match])
+			articulations.append([" ", anim, 14])
+			articulations.append([l, match, 27])
 	# Печать итогового списка таймингов и SVG-файлов:
+	print("SVG-файлы и тайминги для фразы '" + phrase + "':")
+	totaltime = 0
 	for x in articulations:
 		print(x)
+		totaltime = totaltime + x[TIME]
+	print("(всего %d мс)" % totaltime)
 	return articulations
 	
 async def speak_and_articulate(phrase):
 	play("speech/" + phrase + ".wav")
-	for (time, file) in get_articulations():
+	for (letter, file, time) in get_articulations(phrase):
 		articulation(time, "articulation/" + file)
-	wait_audio()
+	# TODO: Too long articulation even if audio is twice as fast. Too long SVG loading?
+	await audio()
 
 slide("лого_персиковый.svg")
-face(read_key())
-speak_and_articulate("можете забрать завтрак, приятного аппетита")
+await face()
+await speak_and_articulate("можете забрать завтрак, приятного аппетита")
 
 articulation(82, "articulation/нейтрзакр.svg")
 articulation(14, "articulation/нейтрзакр-нейрполуоткр.svg")
@@ -83,39 +97,39 @@ articulation(27, "articulation/нейтральный1(полуоткрытый_
 articulation(14, "articulation/нейтр-полуоткрытый-закрытый.svg")
 articulation(27, "articulation/нейтрзакр.svg")
 
-read_key()
+await key()
 
 slide("slides/слайд1.svg")
 
 
-face(read_key())
+await face()
 play("speech/выберите, что вам нужно сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
  
-read_key()
+await key()
 
 articulation(0, "пусто.svg")
 slide("slides/слайд3.svg")
  
-read_key()
+await key()
 
 slide("slides/слайд5.svg")
 play("speech/приложите палец.wav")
-wait_audio()
+await audio()
 
 
-face(read_key())
+await face()
 play("speech/можете забрать лекарства.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
 
-read_key()
+await key()
 
 articulation(0, "пусто.svg")
 slide("slides/слайд7.svg")
 	
-face(read_key())
+await face()
 play("speech/выберите, что вы хотите сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -124,7 +138,7 @@ articulation(0, "пусто.svg")
 slide("slides/слайд9.svg")
 
 
-face(read_key())
+await face()
 play("speech/можете забрать завтрак, приятного аппетита.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -133,7 +147,7 @@ articulation(0, "пусто.svg")
 slide("slides/слайд11.svg")
 
 
-face(read_key())
+await face()
 play("speech/выберите, что вы хотите сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -142,7 +156,7 @@ articulation(0, "пусто.svg")
 slide("slides/слайд13.svg")
 
 
-face(read_key())
+await face()
 play("speech/выберите, что вам нужно сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -150,13 +164,13 @@ articulation(500, "articulation/нейтр-полуоткрытый-закрыт
 articulation(0, "пусто.svg")
 slide("slides/слайд15.svg")
 
-face(read_key())
+await face()
 play("speech/выберите, что вам нужно сделать.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
 
 
-face(read_key())
+await face()
 play("speech/media8.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/злой-открытый-закрытый.svg")
@@ -165,7 +179,7 @@ articulation(0, "пусто.svg")
 slide("slides/слайд19.svg")
 
 
-face(read_key())
+await face()
 play("speech/media10.wav")
 articulation(82, "articulation/нейтрзакр.svg")
 articulation(14, "articulation/нейтрзакр-нейрполуоткр.svg")
@@ -177,7 +191,7 @@ articulation(27, "articulation/нейтральный1(полуоткрытый_
 articulation(14, "articulation/нейтр-полуоткрытый-закрытый.svg")
 articulation(27, "articulation/нейтрзакр.svg")
 
-read_key()
+await key()
 
 articulation(0, "пусто.svg")
 slide("slides/слайд21.svg")
@@ -185,13 +199,13 @@ slide("slides/слайд21.svg")
 articulation(0, "пусто.svg")
 slide("slides/слайд22.svg")
 
-read_key()
+await key()
 
 articulation(0, "пусто.svg")
 slide("slides/слайд23.svg")
 
 
-face(read_key())
+await face()
 play("speech/изменения сохранены.wav")
 articulation(500, "articulation/нейтрзакр-нейтрполуоткр.svg")
 articulation(500, "articulation/нейтр-полуоткрытый-закрытый.svg")
@@ -199,17 +213,17 @@ articulation(500, "articulation/нейтр-полуоткрытый-закрыт
 articulation(0, "пусто.svg")
 slide("slides/слайд25.svg")
 
-read_key() 
+await key() 
 
 # articulation(500, "нейтрзакр.svg")
 # articulation(500, "злойоткр-нейрполуоткр.svg")
-# read_key()
+# await key()
 # articulation(500, "нейтрполуоткр-злойоткр.svg")
-# read_key()
+# await key()
 # articulation(500, "злой-открытый-закрытый.svg")
-# read_key()
+# await key()
 # articulation(500, "злойоткр-нейрполуоткр.svg")
-# read_key()
+# await key()
 # articulation(500, "нейтрзакр-нейтрполуоткр.svg")
-# read_key()
+# await key()
 # articulation(500, "нейтр-полуоткрытый-закрытый.svg")

@@ -19,11 +19,19 @@
 			let body = document.getElementsByTagName("body")[0];
 			let img = document.createElement("img");  //("object");
 			let articulation_img = document.createElement("img");  //("object");
-			let key_pressed = false;
+			let key_pressed_earlier = "";
 			let svg_in_progress = null;
 			let playback_in_progress = null;
 			let articulation_in_progress = null;
-			//document.addEventListener("keypress", () => key_pressed = true);
+			let	key_subscriptions = new Map();
+			document.addEventListener("keypress", (keyboardEvent) => {
+				let key = keyboardEvent.code;
+				if (key_subscriptions.has(key)) {
+					console.log("About to fire " + key_subscriptions.get(key) + " for " + key);
+					document.dispatchEvent(key_subscriptions.get(key));
+					console.log("Finished " + key_subscriptions.get(key) + " for " + key);
+				}
+			});
 			async function timeout(ms) {
 				return new Promise(resolve => setTimeout(resolve, ms));
 			}
@@ -37,11 +45,12 @@
 			function slide(src) {
 				img.src = src;
 			}
-			async function articulation(ms, src) {  // Usage: await articulation()
+			async function articulation(ms, src) {  // Usage: await window.articulation()
 				if (articulation_in_progress != null) {
 					await articulation_in_progress;
 					articulation_in_progress = null;
 				}
+				console.log("Setting articulation to " + src + " for " + ms + " ms");
 				articulation_img.src = src;
 				duration = ms;
 				if (duration != null)
@@ -77,19 +86,26 @@
 					audio_object.onended = resolve;
 				});
 			}
-			async function wait_audio() {  // Usage: await wait_audio()
+			async function wait_audio() {  // Usage: await window.wait_audio()
 				if (playback_in_progress != null) {
 					await playback_in_progress;
 					playback_in_progress = null;
 				}
 			}
-			async function keyboard() {  // Usage await keyboard()
-				if (!key_pressed)
-					return (await new Promise(resolve => document.addEventListener("keydown", resolve, { once: true })) || {key: "KEY IS UNDEFINED"}).key || 'UNDEFINED';
-					//await new Promise(resolve => window.addEventListener("keypress", resolve, { once: true }));
-				key_pressed = false;
-				return 'KEY WAS ALREADY PRESSED';
+			async function press_key() {  // Usage: key_code_string = (await window.key()).code
+				return new Promise(resolve => document.addEventListener("keydown", resolve, { once: true }));
 			}
+			async function wait_key(key) {
+				if (key == null || key === "") {
+					console.log("Waiting for any key");
+					return press_key();
+				}
+				console.log("Waiting for '" + key + "' key");
+				if (!key_subscriptions.has(key))
+					key_subscriptions.set(key, new Event("CustomEvent"+key));
+				return new Promise(resolve => document.addEventListener("CustomEvent"+key, resolve, { once: true }));
+			}
+			// Brython: document.bind("keydown", on_press_key) calls on_press_key(key) where KeyboardEvent is key having the .code field
 			(async()=>{
 				response = await fetch("main.py");
 				code = `<script type="text/python">
@@ -100,10 +116,11 @@ async def main():
 					.replace(/(\s)slide\(/g,'$1window.slide(')
 					.replace(/(\s)articulation\(/g,'$1await window.articulation(')
 					.replace(/(\s)play\(/g,'$1window.play(')
-					.replace(/(\s)wait_audio\(/g,'$1await window.wait_audio(')
-					.replace(/read_key\(/g,'await window.keyboard(')
+					.replace(/(\s)audio\(/g,'$1window.wait_audio(')
+					.replace(/([^a-zA-Z_0-9])key\(/g,'$1window.wait_key(')
 					+ `
-aio.run(main())`;
+aio.run(main())
+`;
 				let script = body.insertAdjacentHTML('beforeend', code);
 				brython();
 			})();
