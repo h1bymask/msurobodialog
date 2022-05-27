@@ -2,7 +2,7 @@
 <animateTransform attributeName="transform" type="rotate" from="14.5184 315.343 363.702" to="3.37754 316.087 364.613" dur="0.3s" repeatCount="1"/>
 <animate attributeName = "d"
 to = "M273.34749,367.12106C306.51412,371.09072 335.52119,368.02037 358.82631,361.08327C334.43066,358.30006 298.81692,364.08834 273.34749,367.12106z" 
-dur = "0.3s" 
+dur = "0.014s" 
 repeatCount = "1"
 />
   </path>
