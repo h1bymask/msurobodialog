@@ -111,7 +111,7 @@
 			(async()=>{
 				response = await fetch('main.py');
 				code = (await response.text()).replace(/^from\s+articulation\s+import.*\n/, async () => {
-					return await (await fetch('articulation.py')).text();  // Brython does not respect <base href=...>
+					return (await fetch('articulation.py')).text();  // Brython does not respect <base href=...>
 				})
 				processedcode = `<script type="text/python">
 from browser import window, aio
