@@ -110,13 +110,13 @@
 			// Brython: document.bind("keydown", on_press_key) calls on_press_key(key) where KeyboardEvent is key having the .code field
 			(async()=>{
 				response = await fetch('main.py');
-				script = (await response.text()).replace(/^from\s+articulation\s+import.*\n/, async () => {
+				code = (await response.text()).replace(/^from\s+articulation\s+import.*\n/, async () => {
 					return await (await fetch('articulation.py')).text();  // Brython does not respect <base href=...>
 				})
-				processedscript = `<script type="text/python">
+				processedcode = `<script type="text/python">
 from browser import window, aio
 async def main():
-`  + script
+`  + code
 		.replace(/^/gm, "\t ")
 		.replace(/(\s)slide\(/g,'$1window.slide(')
 		.replace(/(\s)articulation\(/g,'$1await window.articulation(')
@@ -126,7 +126,7 @@ async def main():
 	+ `
 aio.run(main())
 `;
-				let script = body.insertAdjacentHTML('beforeend', processedscript);
+				let script = body.insertAdjacentHTML('beforeend', processedcode);
 				brython();
 			})();
 		</script>
