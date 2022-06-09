@@ -1,17 +1,6 @@
 from articulation import enter_face, speak_and_articulate
 
 
-
-
-
-
-
-
-
-
-
-
-
 slide("лого_персиковый.svg")
 await key()
 

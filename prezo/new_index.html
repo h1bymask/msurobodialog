@@ -43,9 +43,10 @@
 			body.appendChild(img);
 			body.appendChild(articulation_img);
 			function slide(src) {
+				console.log("Showing " + src + " slide");
 				img.src = src;
 			}
-			current_slide = () => img.src;
+			current_slide = () => (img||{}).src||'';
 			async function articulation(ms, src) {  // Usage: await window.articulation()
 				if (articulation_in_progress != null) {
 					await articulation_in_progress;
@@ -54,7 +55,7 @@
 				//console.log("Setting articulation to " + src + " for " + ms + " ms");
 				articulation_img.src = src;
 				duration = ms;
-				if (duration != null)
+				if (duration != null && ms >= 1)
 					articulation_in_progress = timeout(duration);
 			}
 			async function articulation2(src) {  // TODO
@@ -109,20 +110,23 @@
 			}
 			// Brython: document.bind("keydown", on_press_key) calls on_press_key(key) where KeyboardEvent is key having the .code field
 			(async()=>{
-				response = await fetch('main.py');
-				code = (await response.text()).replace(/^from\s+articulation\s+import.*\n/, async () => {
-					return (await fetch('articulation.py')).text();  // Brython does not respect <base href=...>
-				})
-				processedcode = `<script type="text/python">
-from browser import window, aio
+				code = (await (await fetch('main.py')).text());
+				const matches = code.match(/^from\s+articulation\s+import.*\n/);
+				if (matches != null && matches.length >= 1)
+					code = code.replace(matches[0], await (await fetch('articulation.py')).text());  // Brython does not respect <base href=...>
+				//do {
+				//	matches.shift();
+				//	code = code.replace(matches[0], '');
+				//} while matches.length >= 1);
+				processedcode = `<script type="text/python">from browser import window, aio
 async def main():
-`  + code
-		.replace(/^/gm, "\t ")
-		.replace(/(\s)slide\(/g,'$1window.slide(')
-		.replace(/(\s)articulation\(/g,'$1await window.articulation(')
-		.replace(/(\s)play\(/g,'$1window.play(')
-		.replace(/(\s)audio\(/g,'$1window.wait_audio(')
-		.replace(/([^a-zA-Z_0-9])key\(/g,'$1window.wait_key(')
+`  + code.replace(/^/gm, "\t ")
+		 .replace(/(\s)slide\(/g,'$1window.slide(')
+		 .replace(/(\s)current_slide\(/g,'$1window.current_slide(')
+		 .replace(/(\s)play\(/g,'$1window.play(')
+		 .replace(/(\s)audio\(/g,'$1window.wait_audio(')
+		 .replace(/([^a-zA-Z_0-9])key\(/g,'$1window.wait_key(')
+		 .replace(/(\s)articulation\(/g,'$1await window.articulation(')
 	+ `
 aio.run(main())
 `;

@@ -1,19 +1,17 @@
-from browser import document, window, aio
-
-LONG_SOUNDS=".-"
-
 def on_press_key(key):  # key.code: PageUp, Enter, q, w, e, r, t, y, " ", ...
-	if "faces" in window.current_slide():
+	if "faces" in current_slide():  # Меняем лицо, только если сейчас показываются лица
 		if key.code == "PageUp":
-			window.slide("faces/злой.svg")
+			slide("faces/злой.svg")
 		elif key.code == "PageDown":
-			window.slide("faces/грустный.svg")
-document.bind("keydown", on_press_key)
+			slide("faces/грустный.svg")
+from browser import document
+document.bind("keydown", on_press_key)  # Этот специальный код заставляет HTML-документ при нажатии любой кнопки вызывать функцию on_press_key
 
 async def enter_face():
-	await window.wait_key("Enter")
-	window.slide("faces/нейтральный1.svg")
+	await key("Enter")
+	slide("faces/нейтральный1.svg")
 
+LONG_SOUNDS=".-"
 def get_articulations(phrase):
 	letter_list = []
 	articulations = []
@@ -45,7 +43,7 @@ def get_articulations(phrase):
 	TIME=2  # Индекс в массиве articulations
 	for c in phrase.lower().translate(str.maketrans("","","ьъыр,?!@#$%^&*()[]{}№=+_`'~\\/0123456789")):
 		letter_list.append(c)
-	## Добавление закрытого рта перед словом:
+	# Добавление закрытого рта перед словом:
 	articulations.append([" ", 'нейтрзакр.svg', 0])
 	# Добавление закрытого рта после слова с помощью добавления символа "пробел", которому в массиве mouth соответствует 'нейтрзакр.svg':
 	letter_list.append(" ")
@@ -69,18 +67,15 @@ def get_articulations(phrase):
 				articulations.append([" ", anim, 14])
 				articulations.append([l, match, 27])
 	articulations.append([" ", 'нейтрзакр.svg', 14+27])
-	# Печать итогового списка таймингов и SVG-файлов:
-	#print("SVG-файлы и тайминги для фразы '" + phrase + "':")
+	# Печать таймингов и SVG-файлов:
 	totaltime = 0
 	for x in articulations:
-		#print(x)
 		totaltime = totaltime + x[TIME]
 	print("Фраза " + phrase + ": продолжительность артикуляции %d мс" % totaltime)
 	return articulations
 	
 async def speak_and_articulate(phrase):
-	window.play("speech/" + phrase.translate(str.maketrans("","",LONG_SOUNDS)) + ".wav")
+	await play("speech/" + phrase.translate(str.maketrans("","",LONG_SOUNDS)) + ".wav")
 	for (letter, file, time) in get_articulations(phrase):
-		await window.articulation(time, "articulation/" + file)
-	# TODO: Too long articulation even if audio is twice as fast. Too long SVG loading?
-	await window.wait_audio()
+		articulation(time, "articulation/" + file)
+	await audio()
