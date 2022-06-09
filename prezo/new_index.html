@@ -109,9 +109,9 @@
 			}
 			// Brython: document.bind("keydown", on_press_key) calls on_press_key(key) where KeyboardEvent is key having the .code field
 			(async()=>{
-				response = await fetch("main.py");
+				response = await fetch('main.py');
 				script = (await response.text()).replace(/^from\s+articulation\s+import.*\n/, async () => {
-					return await (await fetch("articulation.py")).text();  // Brython does not respect <base href=...>
+					return await (await fetch('articulation.py')).text();  // Brython does not respect <base href=...>
 				})
 				processedscript = `<script type="text/python">
 from browser import window, aio
