@@ -7,7 +7,10 @@
 					left: 0; 
 					height: 100%; 
 					width: 100%; 
-				} 
+				}
+				body {
+					overflow-y: hidden;
+				}
 		</style>
 		<!--<script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"></script>-->
@@ -26,11 +29,8 @@
 			let	key_subscriptions = new Map();
 			document.addEventListener("keypress", (keyboardEvent) => {
 				let key = keyboardEvent.code;
-				if (key_subscriptions.has(key)) {
-					console.log("About to fire " + key_subscriptions.get(key) + " for " + key);
+				if (key_subscriptions.has(key))
 					document.dispatchEvent(key_subscriptions.get(key));
-					console.log("Finished " + key_subscriptions.get(key) + " for " + key);
-				}
 			});
 			async function timeout(ms) {
 				return new Promise(resolve => setTimeout(resolve, ms));
@@ -45,6 +45,7 @@
 			function slide(src) {
 				img.src = src;
 			}
+			current_slide = () => img.src;
 			async function articulation(ms, src) {  // Usage: await window.articulation()
 				if (articulation_in_progress != null) {
 					await articulation_in_progress;

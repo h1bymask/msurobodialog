@@ -3,15 +3,16 @@ from browser import document, window, aio
 LONG_SOUNDS=".-"
 
 def on_press_key(key):  # key.code: PageUp, Enter, q, w, e, r, t, y, " ", ...
-	if key.code == "PageUp":
-		window.slide("slides/злой.svg")
-	elif key.code == "PageDown":
-		window.slide("slides/грустный.svg")
+	if "faces" in window.current_slide():
+		if key.code == "PageUp":
+			window.slide("faces/злой.svg")
+		elif key.code == "PageDown":
+			window.slide("faces/грустный.svg")
 document.bind("keydown", on_press_key)
 
 async def enter_face():
 	await window.wait_key("Enter")
-	window.slide("slides/нейтральный1.svg")
+	window.slide("faces/нейтральный1.svg")
 
 def get_articulations(phrase):
 	letter_list = []
