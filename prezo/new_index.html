@@ -50,7 +50,7 @@
 					await articulation_in_progress;
 					articulation_in_progress = null;
 				}
-				console.log("Setting articulation to " + src + " for " + ms + " ms");
+				//console.log("Setting articulation to " + src + " for " + ms + " ms");
 				articulation_img.src = src;
 				duration = ms;
 				if (duration != null)
@@ -81,6 +81,7 @@
 			}
 			function play(src) {
 				let audio_object = new Audio(src);
+				audio_object.addEventListener('loadeddata', () => console.log("Фраза " + src + ": продолжительность аудио " + Math.round(audio_object.duration*1000) + " мс"), { once: true })
 				playback_in_progress = new Promise(resolve => {
 					audio_object.play();
 					audio_object.onended = resolve;
