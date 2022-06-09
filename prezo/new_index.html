@@ -109,21 +109,24 @@
 			}
 			// Brython: document.bind("keydown", on_press_key) calls on_press_key(key) where KeyboardEvent is key having the .code field
 			(async()=>{
-				response = await fetch("main.py");
-				code = `<script type="text/python">
+				response = await fetch("main.py
+				script (await response.text()).replace(/^from\s+articulation\s+import.*\n/, async () => {
+					return await fetch("articulation.py");  // Brython does not respect <base href=...>
+				})
+				processedscript = `<script type="text/python">
 from browser import window, aio
 async def main():
-`  + (await response.text())
-					.replace(/^/gm, "\t ")
-					.replace(/(\s)slide\(/g,'$1window.slide(')
-					.replace(/(\s)articulation\(/g,'$1await window.articulation(')
-					.replace(/(\s)play\(/g,'$1window.play(')
-					.replace(/(\s)audio\(/g,'$1window.wait_audio(')
-					.replace(/([^a-zA-Z_0-9])key\(/g,'$1window.wait_key(')
-					+ `
+`  + script
+		.replace(/^/gm, "\t ")
+		.replace(/(\s)slide\(/g,'$1window.slide(')
+		.replace(/(\s)articulation\(/g,'$1await window.articulation(')
+		.replace(/(\s)play\(/g,'$1window.play(')
+		.replace(/(\s)audio\(/g,'$1window.wait_audio(')
+		.replace(/([^a-zA-Z_0-9])key\(/g,'$1window.wait_key(')
+	+ `
 aio.run(main())
 `;
-				let script = body.insertAdjacentHTML('beforeend', code);
+				let script = body.insertAdjacentHTML('beforeend', processedscript);
 				brython();
 			})();
 		</script>
