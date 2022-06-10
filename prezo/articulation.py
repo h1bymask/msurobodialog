@@ -4,6 +4,7 @@ def on_press_key(key):  # key.code: PageUp, Enter, q, w, e, r, t, y, " ", ...
 			slide("faces/злой.svg")
 		elif key.code == "PageDown":
 			slide("faces/грустный.svg")
+			
 from browser import document
 document.bind("keydown", on_press_key)  # Этот специальный код заставляет HTML-документ при нажатии любой кнопки вызывать функцию on_press_key
 
