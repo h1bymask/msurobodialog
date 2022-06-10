@@ -75,7 +75,7 @@ def get_articulations(phrase):
 	return articulations
 	
 async def speak_and_articulate(phrase):
-	await play("speech/" + phrase.translate(str.maketrans("","",LONG_SOUNDS)) + ".wav")
+	await play("speech/" + phrase.translate(str.maketrans("","",LONG_SOUNDS+"?")) + ".wav")
 	for (letter, file, time) in get_articulations(phrase):
 		articulation(time, "articulation/" + file)
 	await audio()
