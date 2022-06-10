@@ -42,7 +42,7 @@ def get_articulations(phrase):
 	ONLY_MATCH=0  # нулевой (единственный) элемент
 	LAST=-1  # Индекс последнего элемента любого массива
 	TIME=2  # Индекс в массиве articulations
-	for c in phrase.lower().translate(str.maketrans("","","ьъыр,?!@#$%^&*()[]{}№=+_`'~\\/0123456789")):
+	for c in phrase.lower().replace("_", " ").translate(str.maketrans("","","ьъыр,?!@#$%^&*()[]{}№=+`'~\\/0123456789")):
 		letter_list.append(c)
 	# Добавление закрытого рта перед словом:
 	articulations.append([" ", 'нейтрзакр.svg', 0])
