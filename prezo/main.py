@@ -5,18 +5,15 @@ slide("лого_персиковый.svg")
 await key()
 
 slide("slides/слайд1.svg")
-await key()
-
 await enter_face()
-await speak_and_articulate("выберите, --что -вам -нужно -сделать")
- 
+await speak_and_articulate("выберите, ---что -вам -нужно -сделать")
+
 articulation(0, "пусто.svg")
 slide("slides/слайд3.svg")
 await enter_face()
  
 slide("slides/слайд5.svg")
 await speak_and_articulate("приложите -палец")
-await audio()
 
 
 await enter_face()
