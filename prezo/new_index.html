@@ -135,8 +135,9 @@
 						}
 						if (svg_fetch_response.status === 200) {
 							console.log(`svg_fetch_response.status is ${svg_fetch_response.status}`);
-							svg_file = await svg_fetch_response.text();
-							svg_cache.set(svg_url, `data:image/svg+xml;utf8,${encodeURIComponent(svg_file.replace(/(\r\n|\n|\r|\t)/gm, ' '))}`);
+							let svg_file = await svg_fetch_response.text();
+							svg_file = svg_file.replace(/(\r\n|\n|\r|\t)/gm, ' ').replace('</svg>', `<!-- ${svg_url} --></svg>`);
+							svg_cache.set(svg_url, `data:image/svg+xml;utf8,${encodeURIComponent(svg_file)}`);
 							console.log(`Cached ${svg_url}`);								
 						}
 						else
