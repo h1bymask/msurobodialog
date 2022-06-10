@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+}
+
+.container {
+    height: 6.5em;
+    weight: 100%;
+    position: relative;
+    background-color: black;
+    display: flex;
+}
+.temp {
+  margin-left: 25px;
+}
+.container p {
+  margin-top: 46px;
+  top: 50%;
+  color: white;
+  margin-left: 30px;
+  font-size: 90%;
+  font-family: 'Comfortaa';
+}
+.container a {
+  margin-top: 46px;
+  top: 50%;
+  color: white;
+  margin-left: 30px;
+  font-size: 90%;
+  font-family: 'Comfortaa';
+  text-decoration: none;
+}
+.empty {
+  width: 65%;
+}
+.page1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url('background.jpg');
+  background-position: center;
+}
+.heading {
+  width: 100%;
+  height: 300%;
+  padding-top: 90px;
+}
+.head-words h1 {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 160%;
+  font-family: 'Lato', sans-serif;
+  text-shadow: 2px 2px 2px #000;
+  color: white;
+}
+.head-words h2 {
+  margin-top: 50px;
+  text-shadow: 3px 3px 3px #000;
+  text-align: center;
+  font-size: 400%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+.block {
+  width: 300px;
+  height: 55px;
+  margin-top: 80px;
+  margin-left: 485px;
+  background-color: white;
+  border: 2px solid;
+  border-color: gray;
+  border-radius: 10px;
+}
+.block h4 {
+  color: black;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 110%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.page2 {
+  width: 100%;
+  height: 100vh;
+}
+.page2 h1 {
+  margin-top: 120px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 300%;
+  font-family: 'Lato', sans-serif;
+  color: #008080;
+}
+.content {
+  width: 70%;
+  height: 300px;
+  margin-left: 190px;
+}
+.content p {
+  text-align: center;
+  font-size: 180%;
+  font-weight: 500;
+  line-height: 150%;
+  font-family: 'Cabin', sans-serif;
+
+}
+.block2 {
+  width: 370px;
+  height: 55px;
+  margin-top: 30px;
+  margin-left: 445px;
+  background-color: white;
+  border: 2px solid;
+  border-color: gray;
+  border-radius: 10px;
+}
+.block2 h4 {
+  color: black;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 110%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.page3 {
+  width: 100%;
+  height: 90vh;
+}
+.page3 h1 {
+  margin-top: 120px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 300%;
+  font-family: 'Lato', sans-serif;
+  color: #008080;
+}
+.block3 {
+  width: 350px;
+  height: 55px;
+  margin-top: 0px;
+  margin-left: 464px;
+  background-color: white;
+  border: 2px solid;
+  border-color: gray;
+  border-radius: 10px;
+}
+.block3 h4 {
+  color: black;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 110%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.page4 {
+  width: 100%;
+  height: 70vh;
+}
+.page4 h1 {
+  margin-top: 120px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 300%;
+  font-family: 'Lato', sans-serif;
+  color: #008080;
+}
+.block4 {
+  width: 350px;
+  height: 55px;
+  margin-top: 60px;
+  margin-left: 464px;
+  background-color: white;
+  border: 2px solid;
+  border-color: gray;
+  border-radius: 10px;
+}
+.block4 h4 {
+  color: black;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 110%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.content2 {
+  width: 70%;
+  height: 100px;
+  margin-left: 190px;
+}
+.content2 p {
+  text-align: center;
+  font-size: 180%;
+  line-height: 150%;
+  font-family: 'Cabin', sans-serif;
+}
+.page5 {
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+}
+.page5 h1 {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 300%;
+  font-family: 'Cabin', sans-serif;
+}
+.page5 h3 {
+  color: white;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 130%;
+  font-family: 'Comfortaa';
+}
+.empty2 {
+  height: 40px;
+}
+.container2 {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 200px;
+}
+.container2 p {
+  color: white;
+  font-size: 100%;
+  font-weight: 1000;
+  font-family: 'Comfortaa';
+}
+.fon {
+  width: 100%;
+  height: 70vh;
+  background-image: url('background.jpg');
+  background-position: center;
+}

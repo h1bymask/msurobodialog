@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+}
+.container {
+    height: 6.5em;
+    weight: 100%;
+    position: relative;
+    background-color: black;
+    display: flex;
+}
+.container a {
+  margin-top: 46px;
+  top: 50%;
+  color: white;
+  margin-left: 30px;
+  font-size: 90%;
+  text-decoration: none;
+  font-family: 'Comfortaa';
+}
+.temp {
+  margin-left: 25px;
+}
+.empty {
+  width: 65%;
+}
+.heading h1 {
+  font-size: 300%;
+  text-align: center;
+  color: #008080;
+  font-family: 'Comfortaa';
+  font-family: 'Lato', sans-serif;
+  margin-top: 50px;
+}
+.members {
+  width: 75%;
+  height: 80vh;
+  display: flex;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+}
+.member {
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+  margin: 10%;
+  cursor: pointer;
+  border-radius: 5%;
+  transition: 0.5s;
+}
+.member:hover {
+  box-shadow: 0 0 0 1px #008080,
+              0 0 0 1px #008080;
+}
+.member p {
+  text-align: center;
+  font-size: 120%;
+  font-family: 'Comfortaa';
+  margin: 30px auto;
+}
+.page5 {
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+}
+.page5 h1 {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 300%;
+  font-family: 'Cabin', sans-serif;
+}
+.page5 h3 {
+  color: white;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 130%;
+  font-family: 'Comfortaa';
+}
+.empty2 {
+  height: 40px;
+}
+.container2 {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 200px;
+}
+.container2 p {
+  color: white;
+  font-size: 100%;
+  font-weight: 1000;
+  font-family: 'Comfortaa';
+}
+.empty3 {
+  height: 100px;
+}
