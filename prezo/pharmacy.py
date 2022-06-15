@@ -1,7 +1,7 @@
 from articulation import enter_face, speak_and_articulate
 
 await enter_face()
-await speak_and_articulate("Добрый день! ---Вас интересуют таблетки -или сироп?")
+await speak_and_articulate("Добрый -день! ----Вас -интересуют -таблетки ---или -сироп?")
  
 await enter_face()
 await speak_and_articulate("В наличии остался только горький. --Сладкий закончился")
