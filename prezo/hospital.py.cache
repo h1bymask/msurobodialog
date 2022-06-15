@@ -1,7 +1,14 @@
-[{"file": "pharmacy.py", "svg": [
+[{"type", "svg": [
 	"articulation/нейтрполуоткр-злойоткр.svg",
-	""
-]},{"file": "pharmacy.py", "wav": [
-]},{"file": "hospital.py", "svg": [
-]},{"file": "hospital.py", "wav": [
+	"articulation/нейтрзакр-нейтрполуоткр.svg",
+	"articulation/нейтр-полуоткрытый-закрытый.svg",
+	"articulation/злой-открытый-закрытый.svg",
+	"articulation/злойоткр-нейрполуоткр.svg",
+	"articulation/злой_открытый рот.svg",
+	"articulation/нейтральный1(полуоткрытый_рот).svg",
+	"articulation/нейтрзакр.svg",
+	"faces/грустный.svg",
+	"faces/злой.svg",
+	"faces/нейтральный1.svg"
+]},{"type": "wav": [
 ]}]
