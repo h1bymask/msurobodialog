@@ -3,8 +3,13 @@
 	"articulation/нейтрзакр-нейтрполуоткр.svg",
 	"articulation/нейтр-полуоткрытый-закрытый.svg",
 	"articulation/злой-открытый-закрытый.svg",
-	"articulation/злойоткр-нейрполуоткр.svg"
-
+	"articulation/злойоткр-нейрполуоткр.svg",
+	"articulation/злой_открытый рот.svg",
+	"articulation/нейтральный1(полуоткрытый_рот).svg",
+	"articulation/нейтрзакр.svg",
+	"faces/грустный.svg",
+	"faces/злой.svg",
+	"faces/нейтральный1.svg"
 ]},{"type": "wav": [
 	"speech/Принимайте его три раза в день после еды Выздоравливайте!.wav",
 	"speech/Привезут только через неделю.wav",
