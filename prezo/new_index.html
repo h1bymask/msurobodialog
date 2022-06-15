@@ -27,7 +27,7 @@
 			let playback_in_progress = null;
 			let articulation_in_progress = null;
 			let	key_subscriptions = new Map();
-			let svg_cache = new Map();
+			let cache = new Map();
 			document.addEventListener("keypress", (keyboardEvent) => {
 				let key = keyboardEvent.code;
 				if (key_subscriptions.has(key))
@@ -45,7 +45,7 @@
 			body.appendChild(articulation_img);
 			function slide(src) {
 				console.log("Showing " + src + " slide");
-				img.src = svg_cache.has(src) ? svg_cache.get(src) : src;
+				img.src = cache.has(src) ? cache.get(src) : src;
 			}
 			current_slide = () => (img||{}).src||'';
 			async function articulation(ms, src) {  // Usage: await window.articulation()
@@ -54,7 +54,7 @@
 					articulation_in_progress = null;
 				}
 				//console.log("Setting articulation to " + src + " for " + ms + " ms");
-				articulation_img.src = svg_cache.has(src) ? svg_cache.get(src) : src;
+				articulation_img.src = cache.has(src) ? cache.get(src) : src;
 				duration = ms;
 				if (duration != null && ms >= 1)
 					articulation_in_progress = timeout(duration);
@@ -83,16 +83,20 @@
 				}
 			}
 			function play(src) {
-				let audio_object = new Audio(src);
+				const url = cache.has(src) ? URL.createObjectURL(cache.get(src)) : src;
+				let audio_object = new Audio(url);
 				audio_object.addEventListener('loadeddata', () => console.log("Фраза " + src + ": продолжительность аудио " + Math.round(audio_object.duration*1000) + " мс"), { once: true })
 				playback_in_progress = new Promise(resolve => {
 					audio_object.play();
 					audio_object.onended = resolve;
+					return cache.has(src) ? url : null;
 				});
 			}
 			async function wait_audio() {  // Usage: await window.wait_audio()
 				if (playback_in_progress != null) {
-					await playback_in_progress;
+					const url = await playback_in_progress;
+					if (url != null)
+						URL.revokeObjectURL(url);
 					playback_in_progress = null;
 				}
 			}
@@ -116,6 +120,9 @@
 			if (params.file == null || params.file === '')
 				alert(`Добавьте параметр file, равный имени файла для выполнения, в Query string. Например:\n${document.location.href}?file=pharmacy.py`);
 			else (async()=>{
+				img.src = "spinner.gif";
+
+				// Importing articulation.py:
 				code = (await (await fetch(params.file)).text());
 				const articulation_imports = code.match(/^from\s+articulation\s+import.*\n/);
 				if (articulation_imports != null && articulation_imports.length >= 1)
@@ -125,38 +132,43 @@
 				//	code = code.replace(articulation_imports[0], '');
 				//} while articulation_imports.length >= 1);
 				
-				// Precaching SVG files
-				cachedcode = code;
-				i = 0;
-				for (let svg_url of code.match(/["'][^"']*\.svg["']/g)||[]) {
-					svg_url = svg_url.replace(/["']/g, '');
-					if (!svg_cache.has(svg_url)) {
-						console.log(`Caching ${svg_url}`);
-						let svg_fetch_response;
-						if ((svg_fetch_response = await fetch(svg_url)).status !== 200) {
-							console.log(`Could not cache ${svg_url}; svg_fetch_response.status is ${svg_fetch_response.status}`);
-							svg_url = "articulation/" + svg_url;
-							svg_fetch_response = await fetch(svg_url);
+				// Caching data:
+				let response = await fetch(params.file + ".cache");
+				if (response.status === 200) {
+					types = await response.json();
+					for (const obj of types) {
+						const type = Object.keys(obj)[0];
+						const data = obj[type];
+						for (const item of data) {
+							if (cache.has(item))
+								throw `Already have ${item} cached.`;
+							if ((response = await fetch(item)).status !== 200)
+								throw `Cannot cache {$item}: status=${response}.`
+							switch (type) {
+								case "svg":
+									cache.set(item, `data:image/svg+xml;utf8,${encodeURIComponent((await response.text()).replace(/(\r\n|\n|\r|\t)/gm, ' ').replace('</svg>', `<!-- ${item} --></svg>`))}`);
+									break;
+								case "wav":
+									cache.set(item, await response.blob());
+									// TODO: URL.revokeObjectURL(url) after it is not used anymore
+									break;
+								default:
+									throw `Unsupported type in ${params.file + ".cache"}: ${type}.`;
+							}
+							console.log(`Cached ${item}`);
 						}
-						if (svg_fetch_response.status === 200) {
-							console.log(`svg_fetch_response.status is ${svg_fetch_response.status}`);
-							let svg_file = await svg_fetch_response.text();
-							svg_file = svg_file.replace(/(\r\n|\n|\r|\t)/gm, ' ').replace('</svg>', `<!-- ${svg_url} --></svg>`);
-							svg_cache.set(svg_url, `data:image/svg+xml;utf8,${encodeURIComponent(svg_file)}`);
-							console.log(`Cached ${svg_url}`);								
-						}
-						else
-							console.log(`FINALLY Could not cache ${svg_url}`);
 					}
-					i++;
 				}
+				
+				// Finally showing empty SVG and scrolling the log:
+				img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E";
 				if (i >= 2)
-					for (i=0; i < 40; i++)
+					for (i=1; i < 40; i++)
 						console.log(''.padStart(i));
 				
 				processedcode = `<script type="text/python">from browser import window, aio
 async def main():
-`  + cachedcode.replace(/^/gm, "\t ")
+`  + code.replace(/^/gm, "\t ")
 		       .replace(/(\s)slide\(/g,'$1window.slide(')
 		       .replace(/(\s)current_slide\(/g,'$1window.current_slide(')
 		       .replace(/(\s)play\(/g,'$1window.play(')
