@@ -11,7 +11,7 @@ await enter_face()
 await speak_and_articulate("Привезут только через неделю")
 
 await enter_face()
-await speak_and_articulate("покупайте горький сироп. --А как иначе. --Вы же хотите выздороветь")
+await speak_and_articulate("покупайте горький сироп. ---А как иначе. ----Вы же хотите выздороветь")
 
  
 await enter_face()
