@@ -15,7 +15,7 @@ await speak_and_articulate("покупайте горький сироп. ---А 
 
  
 await enter_face()
-await speak_and_articulate("Есть Нормализин. --Выздоровеете -и глазом не моргнёте")
+await speak_and_articulate("-Есть Нормализин. ---Выздоровеете -и глазом не моргнёте")
 
 
 await enter_face()
