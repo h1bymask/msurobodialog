@@ -4,7 +4,7 @@ await enter_face()
 await speak_and_articulate("-Добрый день! -Вас интересуют таблетки или сироп?")
  
 await enter_face()
-await speak_and_articulate("В наличии остался только горький. --Сладкий закончился")
+await speak_and_articulate("В наличии остался только горький. ---Сладкий закончился")
 
 
 await enter_face()
