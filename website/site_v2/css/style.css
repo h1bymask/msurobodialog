@@ -44,9 +44,6 @@
   width: 60%;
   height: 40vh;
 }
-.content01 {
-  margin-left: 17%;
-}
 .content1 h1 {
   text-align: center;
   font-size: 400%;
@@ -78,6 +75,7 @@
   width: 40%;
   height: 60vh;
   margin: 6%;
+  text-align: center;
 }
 .content2 h3 {
   text-shadow: 2px 2px 2px gray;
@@ -101,9 +99,10 @@
   border-color: #242424;
   border-radius: 5px;
   margin-top: 4vh;
-  margin-left: 20%;
+  margin-left: auto;
   text-align: center;
   background-color: #2c2c2c;
+  margin-right: auto;
 }
 .button1 a {
   font-size: 145%;
