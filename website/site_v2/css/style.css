@@ -262,11 +262,11 @@
 .page5 {
   width: 100%;
   height: 42vh;
-  background-color: black;
-  background: url(css/image/fone8.jpg);
+  background-color: #1a1a1a;
+  background: url(css/image/fone3.jpg);
+  background-attachment: fixed;
   background-size: 100% auto;
   background-position: center;
-  background-attachment: scroll;
 }
 .page5 h1 {
   text-align: center;
