@@ -185,8 +185,8 @@
 .page3-2 {
   width: 49.5%;
   height: 80vh;
-  background-color: #7d746d;
-  background: url(css/image/fone6.jpg);
+   /*background-color: #7d746d;
+  background: url(css/image/fone6.jpg);*/
   background-size: 200% auto;
   background-position: top right;
   background-repeat: no-repeat;
