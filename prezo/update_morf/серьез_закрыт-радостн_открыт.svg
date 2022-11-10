@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="640"
+   height="480"
+   id="svgcontent"
+   overflow="visible"
+   x="2713.8"
+   y="1136.5"
+   viewBox="0 0 640 480"
+   version="1.1"
+   sodipodi:docname="грустный_закрыт.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1069" />
+  <sodipodi:namedview
+     id="namedview1067"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4.3192439"
+     inkscape:cx="276.55303"
+     inkscape:cy="321.00526"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1064" />
+  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+  <g
+     class="layer"
+     style="pointer-events:all"
+     id="g1064">
+    <title
+       style="pointer-events:inherit"
+       id="title1060">Layer 1</title>
+    <ellipse
+       cx="181"
+       cy="169.636364"
+       fill="#ffffff"
+       id="svg_7"
+       opacity="0.5"
+       rx="0"
+       ry="0"
+       stroke="#000000"
+       stroke-width="2"
+       style="pointer-events:inherit" />
+    <path
+       d="m 296.72174,356.93745 -50.63344,-8.54033 49.45685,-9.80757 38.07149,-2.74156 37.42645,1.73663 55.6895,8.19534 -52.52961,10.16176 -39.58599,2.54293 -37.89525,-1.54719 v 0"
+       fill="#000000"
+       id="svg_12"
+       stroke="#000000"
+       stroke-width="2"
+       fill-opacity="1"
+       stroke-opacity="1"
+       sodipodi:nodetypes="cccccccccc" >
+        <animate
+           attributeName="d"
+           to="m 293.1201,366.50362 -53.74394,-21.70814 52.40364,-7.84304 38.3626,-2.67347 34.4927,1.4932 63.7346,6.07873 -52.69332,24.47554 -40.40455,3.68891 -42.15173,-3.51172 v 00"
+           dur="0.5s"
+           fill="freeze" />
+      </path>
+  </g>
+</svg>
