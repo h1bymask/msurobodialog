@@ -11,6 +11,10 @@ async def enter_face():
 	await key("Enter")
 	slide("faces/нейтральный1.svg")
 
+async def click_face():
+	await key("click")
+	slide("faces/нейтральный1.svg")
+
 LONG_SOUNDS=".-"
 def get_articulations(phrase):
 	letter_list = []
