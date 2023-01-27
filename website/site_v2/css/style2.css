@@ -287,3 +287,6 @@
    transition: 0.5s;
    cursor: pointer;
 }
+::first-letter {
+  font-size: 130%;
+}
