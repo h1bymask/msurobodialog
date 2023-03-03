@@ -1,0 +1,20 @@
+[{"svg": [
+	"articulation/нейтрполуоткр-злойоткр.svg",
+	"articulation/нейтрзакр-нейтрполуоткр.svg",
+	"articulation/нейтр-полуоткрытый-закрытый.svg",
+	"articulation/злой-открытый-закрытый.svg",
+	"articulation/злойоткр-нейрполуоткр.svg",
+	"articulation/злой_открытый рот.svg",
+	"articulation/нейтральный1(полуоткрытый_рот).svg",
+	"articulation/нейтрзакр.svg",
+	"faces/грустный.svg",
+	"faces/злой.svg",
+	"faces/нейтральный1.svg"
+]},{"wav": [
+	"speech/здравствуйте! Таблетки от горла.wav"
+	"speech/да.wav"
+	"speech/да.wav"
+	"speech/не могли бы Вы рассказать инструкцию применения данного лекарства.wav"
+	"speech/а можете рассказать еще и про Горлодин.wav"
+	"speech/нет, спасибо. Я возьму Горлобакт.wav"
+]}]

@@ -1,27 +1,22 @@
 from articulation import click_face, speak_and_articulate
 
 await click_face()
-await speak_and_articulate("--Добрый день! --Вас интересуют таблетки или сироп?")
+await speak_and_articulate("здравствуйте! Таблетки от горла")
  
 await click_face()
-await speak_and_articulate("В наличии остался только горький. ----Сладкий закончился")
+await speak_and_articulate("да")
 
 
 await click_face()
-await speak_and_articulate("Привезут только через неделю")
+await speak_and_articulate("да")
 
 await click_face()
-await speak_and_articulate("покупайте горький сироп. ---А как иначе. ----Вы же хотите выздороветь")
+await speak_and_articulate("не могли бы Вы рассказать инструкцию применения данного лекарства")
 
  
 await click_face()
-await speak_and_articulate("-Есть Нормализин. ---Выздоровеете -и глазом не моргнёте")
+await speak_and_articulate("а можете рассказать еще и про Горлодин")
 
 
 await click_face()
-await speak_and_articulate("Нет, -эти не стоит. --Может тогда Горлонеболин? ----Его можно принимать, -если у Вас нет температуры")
-
-
-await click_face()
-await speak_and_articulate("Принимайте его три раза в день -после еды. --Выздоравливайте!")
-
+await speak_and_articulate("нет, спасибо. Я возьму Горлобакт")
