@@ -19,4 +19,4 @@ await speak_and_articulate("а можете рассказать еще и пр�
 
 
 await click_face()
-await speak_and_articulate("нет, спасибо. Я возьму Горлобакт")
+await speak_and_articulate("нет, спасибо Я возьму Горлобакт")
