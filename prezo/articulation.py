@@ -11,6 +11,10 @@ async def enter_face():
 	await key("Enter")
 	slide("faces/нейтральный1.svg")
 
+async def click_eyes(eyes_title):
+	await key("Click")
+	slide(eyes_title)
+
 async def click_face():
 	await key("click")
 	slide("faces/нейтральный1.svg")
