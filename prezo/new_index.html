@@ -20,8 +20,9 @@
 	<body>		
 		<script type="text/javascript">
 			let body = document.getElementsByTagName("body")[0];
-			let img = document.createElement("img");  //("object");
+			let eyes_img = document.createElement("img");  //("object");
 			let articulation_img = document.createElement("img");  //("object");
+			let slide_img = document.createElement("img");  //("object");
 			let key_pressed_earlier = "";
 			let svg_in_progress = null;
 			let playback_in_progress = null;
@@ -56,18 +57,24 @@
 			async function timeout(ms) {
 				return new Promise(resolve => setTimeout(resolve, ms));
 			}
-			img.type = "image/svg+xml";
+			eyes_img.type = "image/svg+xml";
 			articulation_img.type = "image/svg+xml";
 			for (let tag of body.children)
 				if (tag.tagName.toLowerCase() != "script")
 					body.removeChild(tag);
-			body.appendChild(img);
+			body.appendChild(eyes_img);
 			body.appendChild(articulation_img);
+			body.appendChild(slide_img);
 			function slide(src) {
 				console.log("Showing " + src + " slide");
-				img.src = cache.has(src) ? cache.get(src) : src;
+				slide_img.src = cache.has(src) ? cache.get(src) : src;
 			}
-			current_slide = () => (img||{}).src||'';
+			current_slide = () => (slide_img||{}).src||'';
+			function eyes(src) {
+				console.log("Showing " + src + " expression of the eyes");
+				eyes_img.src = cache.has(src) ? cache.get(src) : src;
+			}
+			current_eyes = () => (eyes_img||{}).src||'';
 			async function articulation(ms, src) {  // Usage: await window.articulation()
 				if (articulation_in_progress != null) {
 					await articulation_in_progress;
@@ -140,11 +147,11 @@
 			if (params.file == null || params.file === '')
 				alert(`Добавьте параметр file, равный имени файла для выполнения, в Query string. Например:\n${document.location.href}?file=pharmacy.py\nДля windows: ${document.location.href}?file=pharmacy.py&iocharset=cp1251`);
 			else (async()=>{
-				img.src = "spinner.gif";
+				slide_img.src = "spinner.gif";
 
 				// Importing articulation.py:
 				code = (await (await fetch(params.file)).text());
-				const articulation_imports = code.match(/^from\s+articulation\s+import.*\n/);
+				const articulation_imports = code.match(/^from\s+articulation\s+import.*$/);
 				if (articulation_imports != null && articulation_imports.length >= 1)
 					code = code.replace(articulation_imports[0], await (await fetch('articulation.py')).text());  // Brython does not respect <base href=...>
 				//do {
@@ -182,7 +189,7 @@
 				}
 				
 				// Finally showing empty SVG and scrolling the log:
-				img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E";
+				slide_img.src = eyes_img.src = articulation_img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E";
 				if (i >= 2)
 					for (i=1; i < 40; i++)
 						console.log(''.padStart(i));
@@ -192,6 +199,8 @@ async def main():
 `  + code.replace(/^/gm, "\t ")
 		       .replace(/(\s)slide\(/g,'$1window.slide(')
 		       .replace(/(\s)current_slide\(/g,'$1window.current_slide(')
+		       .replace(/(\s)eyes\(/g,'$1window.eyes(')
+		       .replace(/(\s)current_eyes\(/g,'$1window.current_eyes(')
 		       .replace(/(\s)play\(/g,'$1window.play(')
 		       .replace(/(\s)audio\(/g,'$1window.wait_audio(')
 		       .replace(/([^a-zA-Z_0-9])key\(/g,'$1window.wait_key(')
