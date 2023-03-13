@@ -2,7 +2,7 @@ from articulation import click_face, speak_and_articulate, click_eyes
  
 await key("click")
 slide("eyes/глаза_нейтральный1.svg")
-await speak_and_articulate("привет. Нет, а что случилось")
+await speak_and_articulate("привет Нет, а что случилось")
 
 await key("click")
 slide("eyes/глаза_нейтральный1.svg")
