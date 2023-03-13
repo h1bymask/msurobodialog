@@ -1,4 +1,4 @@
-from articulation.py import click_face, speak_and_articulate, click_eyes
+from articulation import click_face, speak_and_articulate, click_eyes
 
 
 await click_eyes("eyes/глаза_улыбающийся1.svg")
