@@ -8,7 +8,7 @@ await click_eyes("eyes/глаза_улыбающийся1.svg")
 await speak_and_articulate("зачета завтра не будет, его перенесли на субботу!")
  
 await click_eyes("eyes/глаза_злой.svg")
-await speak_and_articulate("ты всегда так говоришь и сдаешь на тройку, может пора начинать учить.wav")
+await speak_and_articulate("ты всегда так говоришь и сдаешь на тройку, может пора начинать учить")
 
 await click_eyes("eyes/глаза_грустный.svg")
 await speak_and_articulate("хорошо, извини. Больше не буду")
