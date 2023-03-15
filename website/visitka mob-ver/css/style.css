@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #303030;
+}
+::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #181818;
+}
+.page1 {
+  width: 100%;
+  background: url(image/fone3.jpg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: center;
+  padding: 10% 0 10% 0;
+}
+.image1 {
+  margin: 50px auto 0 auto;
+  width: 100%;
+  height: 1300px;
+  background: url(image/pngwing.com.png) no-repeat;
+  background-size: 90%;
+  overflow: auto;
+}
+.content1 {
+  width: 100%;
+}
+.content1 h1 {
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  font-family: 'Ubuntu', sans-serif;
+}
+.content1 h4 {
+  color: white;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 3px 3px 3px black;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 100;
+}
+.page2 {
+  background: url(image/fone4.jpg);
+  padding: 10% 0 10% 0;
+}
+
+.image2 {
+  margin: 50px auto 0 auto;
+  width: 100%;
+  height: 1000px;
+  background: url(image/робот.png) no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+.content2 {
+  width: 100%;
+}
+.content2 h1 {
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 5%;
+
+  text-shadow: 5px 5px 5px grey;
+  text-transform: uppercase;
+  color: #303030;
+  font-family: 'Ubuntu', sans-serif, monospace;
+}
+.content2 h4 {
+  font-size: 30px;
+  margin: 0 5% 5% 5%;
+  text-align: center;
+  text-indent: 25px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.button1 {
+  background-color: #363636;
+  border-radius: 10px;
+  width: 230px;
+  height: 50px;
+  margin: 10px auto 0 auto;
+}
+.button1 h4 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  color: #f0f0f0;
+  font-family: 'Ubuntu', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.page3 {
+  background: url(image/fone5.jpg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: center;
+  padding: 15% 0 10% 0;
+  width: 100%;
+
+}
+.page3 h4 {
+  color: white;
+  margin: 0 5% 0 5%;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 100;
+}
+.image3 {
+  margin: 50px auto 50px auto;
+  width: 90%;
+  height: 600px;
+  background: url(image/photo1.jpg) no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+.image4 {
+  margin: 50px auto 50px auto;
+  width: 90%;
+  height: 600px;
+  background: url(image/photo2.jpg) no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+.page4 {
+  background: url(image/fone7.jpg);
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: center;
+  padding: 15% 0 10% 0;
+  width: 100%;
+}
+.page4 h1 {
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.page4 h4 {
+  font-size: 30px;
+  margin: 5% 5% 7% 5%;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+.button2 {
+  background-color: #181818;
+  border-radius: 10px;
+  width: 450px;
+  height: 50px;
+  margin: 10px auto 0 auto;
+}
+.button2 h4 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+.page5 {
+  background: url(image/fone8.jpg);
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-position: center;
+  padding: 10% 0 10% 0;
+  width: 100%;
+}
+.page5 h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+.page5 h4 {
+  text-align: center;
+  color: white;
+  margin: 5% 0 5% 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+.page5 h3 {
+  color: white;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}

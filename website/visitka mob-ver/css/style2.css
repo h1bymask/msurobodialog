@@ -1,0 +1,348 @@
+* {
+   margin: 0;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+::-webkit-scrollbar-track {
+   background: #303030;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #555555;
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #181818;
+}
+
+.page1 {
+   width: 100%;
+   height: 50vh;
+   background: url(image/fone9.jpg);
+   background-size: cover;
+   padding: 10% 0 10% 0;
+}
+.page1 h1 {
+   text-align: center;
+   font-size: 100px;
+   font-family: 'Ubuntu', sans-serif;
+   text-shadow: 5px 5px 5px black;
+   -webkit-text-stroke-width: 0px;
+   -webkit-text-stroke-color: black;
+   color: white;
+   margin: 15vh 0 0 0;
+}
+.page1 h4 {
+   margin: 150px 0 0 0;
+   color: white;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 50px;
+   font-weight: 100;
+   text-align: center;
+}
+.page2 {
+   width: 100%;
+   background-color: #000000;
+   padding: 10% 0 20% 0;
+}
+.image {
+   /* border: solid 4px rgb(255, 202, 161); */
+   width: 500px;
+   height: 500px;
+   margin: 10% auto 20px auto;
+   border-radius: 30px;
+   overflow: hidden;
+}
+.image img {
+   width: 100%;
+}
+.page2 h1 {
+   text-align: center;
+   color: white;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 40px;
+}
+.page2 h4 {
+   text-align: center;
+   color: white;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 40px;
+   font-weight: 100;
+   margin: 5% 5% 20% 5%;
+}
+
+/* .page1 {
+   width: 100%;
+   height: 100vh;
+   background: url(image/fone9.jpg);
+   background-size: cover;
+   background-position: fixed;
+}
+
+.content {
+   width: 70%;
+   height: 30vh;
+   margin-left: 15%;
+   margin-top: 30vh;
+   position: absolute;
+}
+
+.content h1 {
+   text-align: center;
+   font-size: 600%;
+   font-family: 'Ubuntu', sans-serif;
+   text-transform: uppercase;
+   font-weight: 900;
+   color: white;
+   text-shadow: 5px 5px 5px black;
+   -webkit-text-stroke-width: 0px;
+   -webkit-text-stroke-color: black;
+}
+
+.content p {
+   margin-top: 10vh;
+   margin: 8vh 12%;
+   text-align: center;
+   font-size: 160%;
+   color: white;
+   font-weight: 300;
+   text-shadow: 3px 3px 3px black;
+   font-family: 'Ubuntu', sans-serif;
+   -webkit-text-stroke-width: 0.5px;
+}
+
+.page2 {
+   width: 100%;
+   height: 80vh;
+   background-color: black;
+   margin: 0;
+   padding: 0;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+
+.card1 {
+   background-color: rgb(174, 174, 174);
+   width: 300px;
+   height: 350px;
+   border-radius: 20px;
+   transition: 0.5s;
+   cursor: pointer;
+}
+
+.card1 img {
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
+}
+
+.card1 p {
+   text-align: center;
+   font-size: 150%;
+   font-family: 'Ubuntu', sans-serif;
+   margin-top: 7px;
+}
+
+.card3 img {
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
+}
+
+.card3 p {
+   text-align: center;
+   font-size: 150%;
+   font-family: 'Ubuntu', sans-serif;
+   margin-top: 7px;
+}
+
+.content1 {
+   width: 200px;
+   height: 200px;
+   padding: 10px;
+   border: solid 5px;
+   border-radius: 10px;
+   border-color: rgb(64, 64, 64);
+   background-color: white;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.5s;
+   transform: translateX(+120%) translateY(+20%);
+}
+
+.content1 p {
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 110%;
+   text-align: center;
+}
+
+.container1 {
+   display: flex;
+}
+
+.container1:hover .content1 {
+   visibility: visible;
+   opacity: 1;
+   transition: 0.5s;
+   transform: translateX(-10%) translateY(-20%);
+}
+
+.card1:hover {
+   box-shadow: 0 0 0 7px rgb(147, 147, 147),
+      0 0 0 7px rgb(147, 147, 147);
+}
+
+.card3:hover {
+   box-shadow: 0 0 0 7px rgb(147, 147, 147),
+      0 0 0 7px rgb(147, 147, 147);
+}
+
+.empty {
+   width: 10%;
+}
+
+.card2 {
+   background-color: rgb(174, 174, 174);
+   width: 300px;
+   height: 350px;
+   border-radius: 20px;
+   transition: 0.5s;
+   cursor: pointer;
+}
+
+.card2 img {
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
+}
+
+.card2 p {
+   text-align: center;
+   font-size: 150%;
+   font-family: 'Ubuntu', sans-serif;
+   margin-top: 7px;
+}
+
+.card4 img {
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
+}
+
+.card4 p {
+   text-align: center;
+   font-size: 150%;
+   font-family: 'Ubuntu', sans-serif;
+   margin-top: 7px;
+}
+
+.content2 {
+   width: 200px;
+   height: 200px;
+   padding: 10px;
+   border: solid 5px;
+   border-radius: 10px;
+   border-color: rgb(64, 64, 64);
+   background-color: white;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.5s;
+   transform: translateX(-120%) translateY(+20%);
+}
+
+.content2 p {
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 110%;
+   text-align: center;
+}
+
+.container2 {
+   display: flex;
+}
+
+.container2:hover .content2 {
+   visibility: visible;
+   opacity: 1;
+   transition: 0.5s;
+   transform: translateX(+10%) translateY(-20%);
+}
+
+.card2:hover:hover {
+   box-shadow: 0 0 0 7px rgb(147, 147, 147),
+      0 0 0 7px rgb(147, 147, 147);
+}
+
+.card4:hover:hover {
+   box-shadow: 0 0 0 7px rgb(147, 147, 147),
+      0 0 0 7px rgb(147, 147, 147);
+}
+
+.container3 {
+   display: flex;
+   margin-left: -17%;
+}
+
+.container3:hover .content1 {
+   visibility: visible;
+   opacity: 1;
+   transition: 0.5s;
+   transform: translateX(-10%) translateY(-20%);
+}
+
+.content3 {
+   width: 200px;
+   height: 200px;
+   padding: 10px;
+   border: solid 5px;
+   border-radius: 10px;
+   border-color: rgb(64, 64, 64);
+   background-color: white;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.5s;
+   transform: translateX(+118%) translateY(+20%);
+}
+
+.content3 p {
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 110%;
+   text-align: center;
+}
+
+.container3:hover .content3 {
+   visibility: visible;
+   opacity: 1;
+   transition: 0.5s;
+   transform: translateX(+118%) translateY(-80%);
+}
+
+.darkfone {
+   height: 20vh;
+   background-color: black;
+}
+
+.card3 {
+   background-color: rgb(174, 174, 174);
+   width: 300px;
+   height: 380px;
+   border-radius: 20px;
+   transition: 0.5s;
+   cursor: pointer;
+}
+
+.card4 {
+   background-color: rgb(174, 174, 174);
+   width: 300px;
+   height: 380px;
+   border-radius: 20px;
+   transition: 0.5s;
+   cursor: pointer;
+}
+::first-letter {
+  font-size: 130%;
+} */
