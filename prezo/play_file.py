@@ -4,6 +4,7 @@ import keyboard
 import os
 import webbrowser
 
+pag.FAILSAFE = False
 file = input()
 url = 'https://h1bymask.github.io/school/prezo.html?file=' + file + '.py'
 webbrowser.open(url, new=2)
@@ -13,7 +14,6 @@ while True:
 	if keyboard.is_pressed('s'):
 		break
 	time.sleep(0.2)
-pag.click(683, 384)
 for t in times:
-	pag.click(683, 384)
 	time.sleep(t)
+	pag.click(683, 384)
