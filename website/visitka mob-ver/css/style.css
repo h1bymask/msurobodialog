@@ -16,7 +16,7 @@
 }
 .page1 {
   width: 100%;
-  background: url(image/fone3.jpg);
+  background: url(css/image/fone3.jpg);
   background-attachment: fixed;
   background-size: auto 100%;
   background-position: center;
@@ -26,7 +26,7 @@
   margin: 50px auto 0 auto;
   width: 100%;
   height: 1300px;
-  background: url(image/pngwing.com.png) no-repeat;
+  background: url(css/image/pngwing.com.png) no-repeat;
   background-size: 90%;
   overflow: auto;
 }
@@ -50,7 +50,7 @@
   font-weight: 100;
 }
 .page2 {
-  background: url(image/fone4.jpg);
+  background: url(css/image/fone4.jpg);
   padding: 10% 0 10% 0;
 }
 
@@ -58,7 +58,7 @@
   margin: 50px auto 0 auto;
   width: 100%;
   height: 1000px;
-  background: url(image/робот.png) no-repeat;
+  background: url(css/image/робот.png) no-repeat;
   background-size: 100%;
   overflow: hidden;
 }
@@ -101,7 +101,7 @@ a {
   text-decoration: none;
 }
 .page3 {
-  background: url(image/fone5.jpg);
+  background: url(css/image/fone5.jpg);
   background-attachment: fixed;
   background-size: auto 100%;
   background-position: center;
@@ -120,7 +120,7 @@ a {
   margin: 50px auto 50px auto;
   width: 90%;
   height: 600px;
-  background: url(image/photo1.jpg) no-repeat;
+  background: url(css/image/photo1.jpg) no-repeat;
   background-size: 100%;
   overflow: hidden;
 }
@@ -128,12 +128,12 @@ a {
   margin: 50px auto 50px auto;
   width: 90%;
   height: 600px;
-  background: url(image/photo2.jpg) no-repeat;
+  background: url(css/image/photo2.jpg) no-repeat;
   background-size: 100%;
   overflow: hidden;
 }
 .page4 {
-  background: url(image/fone7.jpg);
+  background: url(css/image/fone7.jpg);
   background-attachment: fixed;
   background-size: auto 100%;
   background-position: center;
@@ -164,7 +164,7 @@ a {
   text-align: center;
 }
 .page5 {
-  background: url(image/fone8.jpg);
+  background: url(css/image/fone8.jpg);
   background-attachment: fixed;
   background-size: 100% auto;
   background-position: center;
