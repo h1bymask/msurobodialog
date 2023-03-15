@@ -44,14 +44,14 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
-  background: url(/css/image/logo.png) no-repeat;
+  background: url('/css/image/logo.png') no-repeat;
   background-size: 40px;
   transition: 0.5s;
   justify-content: center;
   padding: auto;
 }
 .logotype:hover {
-  background: url(/css/image/home.png) no-repeat;
+  background: url('/css/image/home.png') no-repeat;
   background-size: 30px;
   margin-left: 20px;
 }
