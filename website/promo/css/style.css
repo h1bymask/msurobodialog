@@ -23,7 +23,7 @@ body {
   top: 0;
   height: 50px;
   background: rgb(255, 255, 255);
-  opacity: 100%;  
+  opacity: 100%; 
   /* border: solid 1px; */
   display: flex;
   justify-content: center;
@@ -44,14 +44,14 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
-  background: url(image/logo.png) no-repeat;
+  background: url(/css/image/logo.png) no-repeat;
   background-size: 40px;
   transition: 0.5s;
   justify-content: center;
   padding: auto;
 }
 .logotype:hover {
-  background: url(image/home.png) no-repeat;
+  background: url(/css/image/home.png) no-repeat;
   background-size: 30px;
   margin-left: 20px;
 }
@@ -184,7 +184,7 @@ max-width: 960px;
 #switch3:checked ~ #controls label:nth-child(2),
 #switch4:checked ~ #controls label:nth-child(3),
 #switch5:checked ~ #controls label:nth-child(4){
-background: url('image/prev.png') no-repeat;
+background: url('/css/image/prev.png') no-repeat;
 float: left;
 margin: 0 0 0 -84px;
 display: block;
@@ -198,7 +198,7 @@ width: 68px;
 #switch3:checked ~ #controls label:nth-child(4),
 #switch4:checked ~ #controls label:nth-child(5),
 #switch5:checked ~ #controls label:nth-child(1){
-background: url('image/next.png') no-repeat; 
+background: url('/css/image/next.png') no-repeat; 
 float: right;
 margin: 0 -84px 0 0;
 display: block;
