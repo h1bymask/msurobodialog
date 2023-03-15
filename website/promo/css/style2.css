@@ -1,0 +1,254 @@
+* {
+margin: 0;
+}
+::-webkit-scrollbar { 
+width: 10px;
+}
+::-webkit-scrollbar-track {
+background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+background: #8f8f8f;
+border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #565656;
+}
+body {
+/* width: 100%; */
+height: 1300px;
+}
+.fixed_block {
+position: sticky;
+top: 0;
+height: 50px;
+background: rgb(255, 255, 255);
+opacity: 100%;  
+/* border: solid 1px; */
+display: flex;
+justify-content: center;
+box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+            0 2px 2px rgba(0,0,0,0.12), 
+            0 4px 4px rgba(0,0,0,0.12), 
+            0 8px 8px rgba(0,0,0,0.12),
+            0 16px 16px rgba(0,0,0,0.12);
+
+}
+.logotype {
+/* border: solid 1px; */
+/* border-radius: 100px; */
+overflow: hidden;
+width: 50px;
+height: 40px;
+margin-top: 5px;
+margin-left: 10px;
+margin-right: 10px;
+cursor: pointer;
+background: url(image/logo.png) no-repeat;
+background-size: 40px;
+transition: 0.5s;
+justify-content: center;
+padding: auto;
+}
+.logotype:hover {
+background: url(image/home.png) no-repeat;
+background-size: 30px;
+margin-left: 20px;
+}
+.button {
+/* border: solid 1px; */
+/* background-color: #181818; */
+width: 100px;
+height: 50px;
+line-height: 30px; 
+margin-right: 20px;
+margin-left: 20px;
+margin-top: 0px;
+position: relative;
+transition: 0.2s;
+cursor: pointer;
+overflow: hidden;
+justify-content: center;
+}
+.button a {
+text-decoration: none;
+}
+.button p {
+text-align: center;
+font-family: 'Roboto';
+font-weight: 300;
+color: black;
+margin-top: 10px;
+cursor: pointer;
+}
+/* .button:hover {
+box-shadow: 0 0 0 1px rgb(147, 147, 147),
+0 0 0 1px rgb(147, 147, 147);
+} */
+.poloska {
+background-color: rgb(255, 157, 0);
+width: 100%;
+height: 5%;
+position: absolute;
+bottom: 0px;
+opacity: 0%;
+transition: 0.2s;
+}
+.button:hover .poloska {
+opacity: 100%;
+}
+.main {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+}
+.page1 {
+    height: 500px;
+    width: 1200px;
+    margin-top: 80px;
+    display: flex;
+    margin: 100px auto 0 auto;
+}
+.image {
+    width: 750px;
+    height: 500px;
+    /* border: solid 1px; */
+    background: url(image/VITA.png) no-repeat;
+    background-size: auto 100%;
+    margin: 0 0 0 100px
+}
+.content {
+    /* border: solid 1px; */
+    width: 450px;
+    height: 500px;
+    /* justify-content: center;
+    display: flex; */
+    margin-right: 200px;
+}
+/* .text h1 {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 500px;
+}
+.text h3 {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 500px;
+    margin-top: 30px;
+} */
+.name {
+    position: absolute;
+    /* border: solid 1px; */
+    height: 50px;
+    margin: 170px 0 0 0px;
+
+}
+.name h1 {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 80px;   
+}
+.price {
+    position: absolute;
+    /* border: solid 1px; */
+    width: 150px;
+    height: 40px;
+    margin: 290px 0 0 0px;
+}
+.price h3 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 30px; 
+    color:rgb(255, 157, 0)
+}
+.page2 {
+    height: 230px;
+    /* border: solid 1px; */
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.box {
+    width: 300px;
+    height: 100%;
+    border: solid 1px;
+    margin: 10px;
+    padding: 10px;
+}
+.box p {
+  font-size: 30px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 50px
+}
+.ending {
+    background-color: #191919;
+    width: 100%;
+    height: 370px;
+    margin-top: 130px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .element {
+    /* border: solid 1px; */
+    width: 300px;
+    height: 100px;
+    margin-left: 40px;
+    /* margin-right: 20px; */
+    margin-top: 60px;
+    display: block;
+    padding: 10px;
+  }
+  .element a {
+    text-decoration: none;
+  }
+  .element p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(203, 203, 203);
+    margin-bottom: 10px;
+  }
+  .element h4 {
+    position: relative;
+    font-size: 17px;
+    font-family: 'Roboto VF', 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    color: rgb(203, 203, 203);
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .line {
+    width: 1000px;
+    height: 1px;
+    background-color: rgb(188, 188, 188);
+    position: absolute;
+    margin-top: 255px;
+  }
+  .school_name {
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 950px;
+  }
+  .school_name p {
+    font-family: 'Roboto VF', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 23px; 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: rgb(203, 203, 203);
+  }
