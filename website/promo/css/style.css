@@ -23,7 +23,7 @@ body {
   top: 0;
   height: 50px;
   background: rgb(255, 255, 255);
-  opacity: 100%; 
+  opacity: 100%;  
   /* border: solid 1px; */
   display: flex;
   justify-content: center;
@@ -44,14 +44,14 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
-  background: url('css/image/logo.png') no-repeat;
+  background: url(css/image/logo.png) no-repeat;
   background-size: 40px;
   transition: 0.5s;
   justify-content: center;
   padding: auto;
 }
 .logotype:hover {
-  background: url('css/image/home.png') no-repeat;
+  background: url(css/image/home.png) no-repeat;
   background-size: 30px;
   margin-left: 20px;
 }
@@ -108,12 +108,55 @@ body {
   width: 100%;
   background-color: antiquewhite;
   margin-bottom: 15px;
+  display: flex;
+}
+
+.page1 img {
+  /* border: solid 1px; */
+  width: 600px;
+  height: 500px;
+  margin : 70px auto 0 auto;
 }
 .page2 {
   height: 550px;
   width: 100%;
   background-color:darksalmon;
   margin-bottom: 15px;
+  display: flex;
+}
+.text {
+  /* border: solid 1px; */
+  width: 600px;
+  height: 200px;
+  margin : auto auto auto auto;
+}
+.text h1 {
+  font-size: 80px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.text3 {
+  /* border: solid 1px; */
+  width: 800px;
+  height: 200px;
+  margin : auto auto auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text3 h1 {
+  font-size: 45px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.page2 img {
+  /* border: solid 1px; */
+  width: 600px;
+  height: 500px;
+  margin : auto auto auto auto;
 }
 .page3 {
   width: 100%;
@@ -135,13 +178,13 @@ body {
   width: 50%;
   /* border: solid 1px; */
   margin-right: 7px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .half_box2 {
   width: 50%;
   /* border: solid 1px; */
   margin-left: 7px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* -------------------------- */
@@ -287,16 +330,95 @@ transition: opacity 0.2s ease-out;
   width: 100%;
   height: 100%;
   background-color: rgb(29, 29, 29);
+  padding: 5%;
+  box-sizing: border-box;
+}
+.container1 img {
+  /* border: solid 1px; */
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+}
+
+.container1 p {
+  font-size: 27.5px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  display: block
+}
+.container1 h4 {
+  font-size: 35px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  display: block
 }
 .container2 {
   width: 100%;
   height: 100%;
   background-color:antiquewhite;
+  padding: 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container2 h4 {
+  font-size: 30px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  display: block
 }
 .container3 {
   width: 100%;
   height: 100%;
-  background-color:lavenderblush
+  background-color:lavenderblush;
+  padding: 10% 0 10% 0;
+  box-sizing: border-box;
+}
+.container3 img {
+  /* border: solid 1px; */
+  width: 90%;
+  margin: 5% 5% 0 5%;
+}
+.container3 h2 {
+  font-size: 50px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  text-align: center;
+  margin: auto 0 auto 0;
+  margin: 0 3% 0 3%;
+}
+.container4 {
+  width: 100%;
+  height: 100%;
+  background-color:lavenderblush;
+  position: relative;
+}
+.container4 img {
+  height: 80%;
+  right: 5%;
+  margin: 7% 0 0 0;
+  position: absolute;
+}
+.text2 {
+  /* border: solid 1px; */
+  width: 40%;
+  height: 99%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.text2 p {
+  font-size: 50px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 .ending {
   background-color: #191919;
