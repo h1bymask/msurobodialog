@@ -100,20 +100,42 @@ body {
   margin-top: 30px;
 }
 .page1 {
-  height: 500px;
   width: 100%;
   background-color: antiquewhite;
   margin-bottom: 15px;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.page1 p {
+  font-size: 40px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  text-align: center;
+}
+.page1 img {
+  width: 100%;
+  margin-top: 15%;
 }
 .page2 {
-  height: 500px;
   width: 100%;
   background-color:darksalmon;
   margin-bottom: 15px;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.page2 p {
+  font-size: 25px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 5%;
+}
+.page2 img {
+  width: 100%;
+  height: auto;
+  margin-top: 15%;
 }
 .page3 {
   width: 100%;
-  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,7 +143,6 @@ body {
 }
 .box {
   width: 100%;
-  height: 480px;
   /* border: solid 1px; */
   display: flex;
   overflow: hidden;
@@ -180,7 +201,7 @@ max-width: 960px;
 #switch3:checked ~ #controls label:nth-child(2),
 #switch4:checked ~ #controls label:nth-child(3),
 #switch5:checked ~ #controls label:nth-child(4){
-background: url(css/image/prev.png) no-repeat;
+background: url('css/image/prev.png') no-repeat;
 float: left;
 margin: 0 0 0 -84px;
 display: block;
@@ -194,7 +215,7 @@ width: 68px;
 #switch3:checked ~ #controls label:nth-child(4),
 #switch4:checked ~ #controls label:nth-child(5),
 #switch5:checked ~ #controls label:nth-child(1){
-background: url(css/image/next.png) no-repeat; 
+background: url('css/image/next.png') no-repeat; 
 float: right;
 margin: 0 -84px 0 0;
 display: block;
@@ -281,18 +302,64 @@ transition: opacity 0.2s ease-out;
 
 .container1 {
   width: 100%;
-  height: 100%;
   background-color: rgb(29, 29, 29);
+  padding: 5%;
+  box-sizing: border-box;
+}
+.container1 p {
+  font-size: 20px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+}
+.container1 img {
+  width: 100%;
+  margin-top: 5%;
 }
 .container2 {
   width: 100%;
   height: 100%;
   background-color:antiquewhite;
+  padding: 10%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container2 p {
+  font-size: 20px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  text-align: center;
 }
 .container3 {
   width: 100%;
   height: 100%;
-  background-color:lavenderblush
+  background-color:lavenderblush;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.container4 {
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+  padding: 10%;
+  box-sizing: border-box;
+}
+.container4 p {
+  font-size: 20px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}
+.container3 p {
+  font-size: 30px;
+  font-family: 'Roboto VF', 'Roboto', sans-serif;
+  text-align: center;
+  margin-top: 5%
+}
+.container3 img {
+  width: 100%;
+  margin-top: 5%;
 }
 .ending {
   background-color: #191919;
